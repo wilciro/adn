@@ -3,5 +3,4 @@ stage('NPM Install') {
         echo "------------>Installing<------------"
         sh 'npm install'
     }
-} 
-
+}
