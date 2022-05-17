@@ -1,6 +1,19 @@
-stage('NPM Install') {
-    steps {
-        echo "------------>Installing<------------"
-        sh 'npm install'
+pipeline {
+    agent {
+        docker {
+            image 'node:lts-buster-slim'
+            args '-p 3000:3000'
+        }
+    }
+    environment {
+        CI = 'true'
+    }
+    stages {
+        stage('NPM Install') {
+            steps {
+                echo "------------>Installing<------------"
+                sh 'npm install'
+            }
+        }
     }
 }
