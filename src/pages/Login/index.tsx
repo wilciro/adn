@@ -1,14 +1,17 @@
 // React
 import { Avatar, Box, Button, Space } from '@mantine/core';
 import { useForm } from '@mantine/form';
-import { CustomForm } from 'components/CustomForm';
-import { loginForm } from 'constants/forms/login';
-import React from 'react';
+import CustomForm from 'components/CustomForm';
+import { initialFormLogin, loginForm, validateFormLogin } from 'constants/forms/login';
+import React, { useRef } from 'react';
+
+type typeCustomForm = React.ElementRef<typeof CustomForm>;
 
 export const LoginPage: React.FC = () => {
+  const refForm = useRef<typeCustomForm>(null)
 
   const login = () => {
-    const a = 10
+    refForm.current?.onsubmit();
   }
 
   return (    
@@ -19,6 +22,9 @@ export const LoginPage: React.FC = () => {
       <Space h="md" />
       <CustomForm 
         fields={loginForm}
+        validate={validateFormLogin}
+        initialValues={initialFormLogin}
+        ref={refForm}
       />
       <Space h="md" />
       <Button onClick={login}>Iniciar sesión</Button>

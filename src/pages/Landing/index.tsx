@@ -1,13 +1,16 @@
 // React
 import { Box, Button, Space } from "@mantine/core"
-import { CustomForm } from "components/CustomForm"
-import { landingForm } from "constants/forms/landing"
-import React, { FC } from "react"
+import CustomForm from "components/CustomForm"
+import { landingForm, validateFormLanding } from "constants/forms/landing"
+import React, { FC, useRef } from "react"
+
+type typeCustomForm = React.ElementRef<typeof CustomForm>;
 
 const LandingPage: FC = () => {
+    const refForm = useRef<typeCustomForm>(null)
 
     const register = () => {
-        const a = 10
+        refForm.current?.onsubmit();
     }
 
     return (
@@ -16,7 +19,10 @@ const LandingPage: FC = () => {
             <p>Diligencia todos los campos para asignar la cita</p>
             <Space h="md" />
             <CustomForm 
+                initialValues={{date: ""}}
                 fields={landingForm}
+                validate={validateFormLanding}
+                ref={refForm}
             />
             <Space h="md" />
             <Button onClick={register}>Registrar</Button>

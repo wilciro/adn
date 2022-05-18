@@ -1,4 +1,4 @@
-import { CustomFormFieldProps } from "components/CustomForm";
+import { CustomFormFieldProps, ValidateProps } from "components/CustomForm";
 
 export const loginForm : Array<CustomFormFieldProps> = [
     {
@@ -22,3 +22,14 @@ export const loginForm : Array<CustomFormFieldProps> = [
         }
     }
 ]
+
+export const validateFormLogin = {
+    "username" : (value: string) => (`${value}`.length > 0 ? null: "Por favor ingrese el nombre de usuario"),
+    "password" : (value: string) => (`${value}`.length > 0 ? null:  "Por favor ingrese la contraseña")
+}
+
+
+export const initialFormLogin = {
+    "username" : "",
+    "password" : ""
+}

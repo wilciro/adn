@@ -52,3 +52,8 @@ export const landingForm : Array<CustomFormFieldProps> = [
         }
     }
 ]
+
+export const validateFormLanding = {
+    "owner_name" : (value: string) => `${value}`.length + 1,
+    "date" : (value: string) => `${value}`.length + 1
+}
