@@ -11,12 +11,6 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('lint') {
-            steps {
-                echo "------------>Exec eslint<------------"
-                sh 'npm run lint'
-            }
-        }
         stage('Static Code Analysis') {
             steps {
                 echo '------------>Static code analysis<------------'
