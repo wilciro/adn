@@ -21,7 +21,6 @@ const App: FC = () => {
     getInitialValueInEffect: true,
   });
   const toggleColorScheme = (value?: ColorScheme) => {
-    console.log(value)
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
   };
     
@@ -38,21 +37,21 @@ const App: FC = () => {
         withGlobalStyles
         withNormalizeCSS 
       >
+      <BrowserRouter>
 
         <AppShell
           padding="md"
-          header={<LayoutHeader />}
+          header={<LayoutHeader logged={false} />}
           footer={<LayoutFooter />}
           styles={(theme) => ({
             main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
           })}
         > 
           <LayoutBody>
-            <BrowserRouter>
               <CustomRoutes />
-            </BrowserRouter>
           </LayoutBody>
         </AppShell>
+      </BrowserRouter>
         
       </MantineProvider>
     </ColorSchemeProvider>

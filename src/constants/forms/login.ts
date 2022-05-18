@@ -1,11 +1,24 @@
-export const loginForm = [
+import { CustomFormFieldProps } from "components/CustomForm";
+
+export const loginForm : Array<CustomFormFieldProps> = [
     {
-        "label": "Username",
+        "label": "Nombre de usuario",
         "name": "username",
-        "placeholder": "Type the username",
+        "placeholder": "Ingrese el nombre de usuario",
+        "type" : "text",
         "required": {
             "value" : true,
-            "message" : "Please enter the username"
+            "message" : "Por favor ingrese el nombre de usuario"
+        }
+    },
+    {
+        "label": "Contraseña",
+        "name": "password",
+        "placeholder": "Ingrese la contraseña",
+        "type" : "password",
+        "required": {
+            "value" : true,
+            "message" : "Por favor ingrese la contraseña"
         }
     }
 ]
