@@ -36,16 +36,15 @@ const CustomForm: ForwardRefRenderFunction<CustomFormHandleProps, CustomFormProp
   validate
 }, ref) => {
 
-
   const form = useForm({
     initialValues,
     validate
-  })
+  });
 
   const getField = (field: CustomFormFieldProps) => {
-    let ret = null
+    let ret = null;
     switch(field.type) {
-      case "text":
+      case 'text':
         ret = <TextInput
           data-testid={field.label}
           required={field.required?.value || false}
@@ -53,29 +52,29 @@ const CustomForm: ForwardRefRenderFunction<CustomFormHandleProps, CustomFormProp
           placeholder={field.placeholder || field.label}
           {...form.getInputProps(field.name as never)}
         />
-        break
-      case "password":
+        break;
+      case 'password':
         ret = <PasswordInput
           data-testid={field.label}
           label={field.label}
           placeholder={field.placeholder || field.label}
           {...form.getInputProps(field.name as never)}
         />
-        break
+        break;
       default:
-        break
+        break;
     }
 
-    return ret
-  }
+    return ret;
+  };
 
   const onsubmit = (): {[key: string] : string | number | null | undefined} | null => {
-    form.validate()
+    form.validate();
     if (Object.keys(form.errors).length > 0) {
-      return null
+      return null;
     }
-    return form.values as {[key: string] : string | number | null | undefined}
-  }
+    return form.values as {[key: string] : string | number | null | undefined};
+  };
 
   useImperativeHandle(ref, () => ({
     onsubmit
@@ -93,4 +92,5 @@ const CustomForm: ForwardRefRenderFunction<CustomFormHandleProps, CustomFormProp
 };
 
 
-export default forwardRef(CustomForm)
+export default forwardRef(CustomForm);
+

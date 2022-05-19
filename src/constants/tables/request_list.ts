@@ -30,4 +30,4 @@ export const requestListHeader = [
         row: "price",
         format: (price: string) => formatPrice(price)
     },
-]
+];

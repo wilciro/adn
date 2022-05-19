@@ -20,17 +20,17 @@ export interface CustomTableProps {
 
 const CustomTable: React.FC<CustomTableProps> = ({header, title, endpoint}) => {
 
-    const [rowsData, setRowsData] = useState<Array<object>>([]) 
+    const [rowsData, setRowsData] = useState<Array<object>>([]);
     
     const getData = async () => {
-        const data = await getTableData(endpoint)
+        const data = await getTableData(endpoint);
         if (data.valid) {
-            setRowsData(data.data)
+            setRowsData(data.data);
         }
-    }
+    };
     
     useEffect(() => {
-        getData()
+        getData();
     }, [])
 
     const ths = header.map((item: HeaderModel, index: number) => (
@@ -69,4 +69,5 @@ const CustomTable: React.FC<CustomTableProps> = ({header, title, endpoint}) => {
     );
 };
 
-export default CustomTable
+export default CustomTable;
+

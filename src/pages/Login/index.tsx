@@ -1,6 +1,5 @@
 // React
 import { Avatar, Box, Button, Space } from '@mantine/core';
-import { useForm } from '@mantine/form';
 import CustomForm from 'components/CustomForm';
 import { initialFormLogin, loginForm, validateFormLogin } from 'constants/forms/login';
 import { SessionContext } from 'context/SessionContext';
@@ -13,25 +12,25 @@ type typeCustomForm = React.ElementRef<typeof CustomForm>;
 const LoginPage: React.FC = () => {
   const navigate = useNavigate();
 
-  const [loading, setLoading] = useState<boolean>(false)
+  const [loading, setLoading] = useState<boolean>(false);
   const { mutations: {setUsername} } = useContext(SessionContext);
-  const refForm = useRef<typeCustomForm>(null)
+  const refForm = useRef<typeCustomForm>(null);
 
   const login = () => {
     const dataForm = refForm.current?.onsubmit();
     if(dataForm) {
-      setLoading(true)
+      setLoading(true);
       const dataSend = {
-        "username" : dataForm?.username as string || "",
-        "password" : dataForm?.password as string || ""
-      }
+        'username' : dataForm?.username as string || "",
+        'password' : dataForm?.password as string || ""
+      };
       loginUser(dataSend).then((valid: boolean) => {
-        setLoading(false)
+        setLoading(false);
         if(valid) {
-          setUsername(dataSend.username)
+          setUsername(dataSend.username);
           navigate('/dashboard');
         }
-      })
+      });
     }
   }
 
@@ -53,4 +52,4 @@ const LoginPage: React.FC = () => {
   );
 };
 
-export default LoginPage
+export default LoginPage;

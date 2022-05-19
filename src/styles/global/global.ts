@@ -28,4 +28,4 @@ export default createGlobalStyle`
 		--heading-color: #282828;
 		--border-color: #303030;
 	}
-`
+`;

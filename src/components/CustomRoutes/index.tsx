@@ -13,8 +13,6 @@ import AboutPage from 'pages/About';
 
 const LoginPage = React.lazy(() => import('pages/Login'));
 
-
-
 const CustomRoutes: FC = () => {
 
   const { data: {username} } = useContext(SessionContext);
@@ -53,4 +51,4 @@ const CustomRoutes: FC = () => {
   );
 };
 
-export default CustomRoutes
+export default CustomRoutes;

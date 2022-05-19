@@ -22,6 +22,6 @@ export const recoverSession = (): SessionState => {
 };
 
 export const deleteSession = (): undefined => {
-  localStorage.removeItem(SESSION_IDENTIFIER)
-  return undefined
-}
+  localStorage.removeItem(SESSION_IDENTIFIER);
+  return undefined;
+};

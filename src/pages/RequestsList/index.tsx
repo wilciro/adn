@@ -20,4 +20,4 @@ const RequestsListPage: React.FC = () => {
   );
 };
 
-export default RequestsListPage
+export default RequestsListPage;

@@ -1,34 +1,33 @@
 // React
-import { ActionIcon, Button, Menu, useMantineColorScheme } from '@mantine/core'
-import { SessionContext, SessionProvider } from 'context/SessionContext';
-import React, { useContext, useState } from 'react'
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { ActionIcon, Button, useMantineColorScheme } from '@mantine/core';
+import { SessionContext } from 'context/SessionContext';
+import React, { useContext, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import { Menu2, MoonStars, Sun } from 'tabler-icons-react';
 
 // Style
-import { ButtonsSeparator, Header, Nav, NavClose, NavMenu } from './style'
+import { ButtonsSeparator, Header, Nav, NavClose, NavMenu } from './style';
 
 const LayoutHeader: React.FC = () => {
 
+    const [openMenu, setOpenMenu] = useState<boolean>(false);
 
-    const [openMenu, setOpenMenu] = useState<boolean>(false)
-
-    const { data: {username}, mutations: { setUsername } } = useContext(SessionContext)
+    const { data: {username}, mutations: { setUsername } } = useContext(SessionContext);
     const logged = username ?? false;
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const { colorScheme, toggleColorScheme } = useMantineColorScheme();
     const dark = colorScheme === 'dark';
 
     const logout = () => {
-        setUsername(undefined)
-        navigate("/login")
-    }
+        setUsername(undefined);
+        navigate('/login');
+    };
     
     const toggleMenu = () => {
-        setOpenMenu(!openMenu)
-    }
+        setOpenMenu(!openMenu);
+    };
 
     return (
         <>
@@ -79,7 +78,7 @@ const LayoutHeader: React.FC = () => {
                 </NavMenu>
             </Nav>
         </>
-    )
+    );
 }
 
-export default LayoutHeader
+export default LayoutHeader;

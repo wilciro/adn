@@ -1,7 +1,6 @@
 // React
-import { Box } from "@mantine/core"
+import { Box } from '@mantine/core'
 import React, { FC } from "react"
-
 
 const AboutPage: FC = () => {
     
@@ -9,7 +8,7 @@ const AboutPage: FC = () => {
         <Box sx={{ maxWidth: 350 }} mx="auto">
             <h2>Sobre Vet App</h2>
         </Box>
-    )
-}
+    );
+};
 
-export default AboutPage
+export default AboutPage;
