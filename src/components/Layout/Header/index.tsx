@@ -46,9 +46,9 @@ const LayoutHeader: React.FC = () => {
                 <ButtonsSeparator>
                     {
                         logged ? 
-                            <Button onClick={logout}>Salir</Button>
+                            <Button onClick={logout} id="header-logout-link">Salir</Button>
                         :
-                            <Link to="/login">
+                            <Link to="/login" id="header-login-link">
                                 <Button>Ingresar</Button>
                             </Link>
                     }

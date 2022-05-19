@@ -26,9 +26,9 @@ const LoginPage: React.FC = () => {
         "password" : dataForm?.password as string || ""
       }
       loginUser(dataSend).then((valid: boolean) => {
-        setUsername(dataSend.username)
         setLoading(false)
         if(valid) {
+          setUsername(dataSend.username)
           navigate('/dashboard');
         }
       })
@@ -38,7 +38,7 @@ const LoginPage: React.FC = () => {
   return (    
     <Box sx={{ maxWidth: 350 }} mx="auto">
       <Avatar size="lg">I</Avatar>
-      <h2>Inicio de sesión</h2>
+      <h2 id="title-login">Inicio de sesión</h2>
       <p>Ingresa tus datos y empieza la administración</p>
       <Space h="md" />
       <CustomForm 
@@ -48,7 +48,7 @@ const LoginPage: React.FC = () => {
         ref={refForm}
       />
       <Space h="md" />
-      <Button onClick={login} loading={loading}>Iniciar sesión</Button>
+      <Button onClick={login} loading={loading} id="login-button">Iniciar sesión</Button>
     </Box>
   );
 };

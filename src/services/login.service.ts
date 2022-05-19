@@ -11,5 +11,5 @@ export const loginUser = async (data: LoginProps) : Promise<boolean> => {
         endpoint: "user",
         body: data
     })
-    return apiValue.valid
+    return apiValue.valid && apiValue.data.length > 0
 }

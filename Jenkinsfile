@@ -19,6 +19,18 @@ pipeline {
                 sonarPathProperties:'./sonar-project.properties')
             }
         }
+        stage('Unit testing') {
+            steps {
+                echo '------------>Performing unit testing<------------'
+                sh 'npm run test'
+            }
+        }
+        stage('e2e testing') {
+            steps {
+                echo '------------>Performing e2e testing with cypress<------------'
+                sh 'npm run cypress'
+            }
+        }
         stage('build') {
             steps {
                 echo "------------>Building<------------"

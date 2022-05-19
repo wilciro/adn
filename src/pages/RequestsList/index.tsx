@@ -8,11 +8,15 @@ import { requestListHeader } from 'constants/tables/request_list';
 const RequestsListPage: React.FC = () => {
 
   return (  
-    <CustomTable 
-      title="Peticiones"
-      header={requestListHeader}
-      endpoint="requests"
-    />
+    <>
+      <h2 id="title-petitions-list">Lista de citas</h2>
+    
+      <CustomTable 
+        title="Peticiones"
+        header={requestListHeader}
+        endpoint="requests"
+      />
+    </>
   );
 };
 
