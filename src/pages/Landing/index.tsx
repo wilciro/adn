@@ -7,27 +7,27 @@ import React, { FC, useRef } from 'react';
 type typeCustomForm = React.ElementRef<typeof CustomForm>;
 
 const LandingPage: FC = () => {
-    const refForm = useRef<typeCustomForm>(null);
+  const refForm = useRef<typeCustomForm>(null);
 
-    const register = () => {
-        refForm.current?.onsubmit();
-    };
+  const register = () => {
+    refForm.current?.onsubmit();
+  };
 
-    return (
-        <Box sx={{ maxWidth: 350 }} mx="auto">
-            <h2>Solicitud de cita veterinaria</h2>
-            <p>Diligencia todos los campos para asignar la cita</p>
-            <Space h="md" />
-            <CustomForm 
-                initialValues={{date: ''}}
-                fields={landingForm}
-                validate={validateFormLanding}
-                ref={refForm}
-            />
-            <Space h="md" />
-            <Button onClick={register}>Registrar</Button>
-        </Box>
-    );
+  return (
+    <Box sx={{ maxWidth: 350 }} mx="auto">
+      <h2>Solicitud de cita veterinaria</h2>
+      <p>Diligencia todos los campos para asignar la cita</p>
+      <Space h="md" />
+      <CustomForm
+        initialValues={{ date: '' }}
+        fields={landingForm}
+        validate={validateFormLanding}
+        ref={refForm}
+      />
+      <Space h="md" />
+      <Button onClick={register}>Registrar</Button>
+    </Box>
+  );
 };
 
 export default LandingPage;

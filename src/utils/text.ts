@@ -6,6 +6,9 @@ export const capitalize = (text: string): string =>
     .join(' ');
 
 export const formatPrice = (text: string): string => {
-  const price = new Intl.NumberFormat('es-CO', { style: 'currency', currency: 'COP' }).format(parseFloat(text));
+  const price = new Intl.NumberFormat('es-CO', {
+    style: 'currency',
+    currency: 'COP',
+  }).format(parseFloat(text));
   return `${price}`;
 };

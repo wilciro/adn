@@ -36,4 +36,3 @@ export const SessionProvider = ({ children }: SessionProps) => {
     </SessionContext.Provider>
   );
 };
-

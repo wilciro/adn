@@ -6,18 +6,14 @@ import React from 'react';
 import { Body } from './style';
 
 interface BodyProps {
-    children: React.ReactNode
+  children: React.ReactNode;
 }
 
-const LayoutBody: React.FC<BodyProps> = ({children}) => {
-    const { colorScheme } = useMantineColorScheme();
-    const dark = colorScheme === 'dark';
-    
-    return (
-        <Body dark={dark}>
-            {children}
-        </Body>
-    );
+const LayoutBody: React.FC<BodyProps> = ({ children }) => {
+  const { colorScheme } = useMantineColorScheme();
+  const dark = colorScheme === 'dark';
+
+  return <Body dark={dark}>{children}</Body>;
 };
 
 export default LayoutBody;

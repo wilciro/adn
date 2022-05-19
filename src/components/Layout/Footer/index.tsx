@@ -5,11 +5,7 @@ import React from 'react';
 import { Footer } from './style';
 
 const LayoutFooter: React.FC = () => {
-    return (
-        <Footer>
-            Ceiba software 2022
-        </Footer>
-    );
-}
+  return <Footer>Ceiba software 2022</Footer>;
+};
 
 export default LayoutFooter;

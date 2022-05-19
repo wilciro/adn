@@ -1,10 +1,10 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
     body {
         margin: 0;
         padding: 0;
-        color: ${props => (props.theme ? 'white' : 'black')};
+        color: ${(props) => (props.theme ? 'white' : 'black')};
         background: rgba(30, 30, 30, 0.05)
     }
     * {

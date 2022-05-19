@@ -15,7 +15,7 @@ class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
     super(props);
 
-    this.state = {hasError: false};
+    this.state = { hasError: false };
   }
 
   public static getDerivedStateFromError(_: Error): State {
@@ -28,15 +28,16 @@ class ErrorBoundary extends Component<Props, State> {
   } */
 
   public render() {
-    const {hasError} = this.state;
-    const {children} = this.props;
+    const { hasError } = this.state;
+    const { children } = this.props;
     if (hasError) {
       return (
         <Container>
           <Paper shadow="xs" p="md">
             <Text>¡Ups! Ocurrió un error mientras navegabas</Text>
             <Text>
-              Si este error persite, por favor contacta con soporte, por ahora vuelve al inicio con el siguiente enlace.
+              Si este error persite, por favor contacta con soporte, por ahora
+              vuelve al inicio con el siguiente enlace.
             </Text>
             <Space h="md" />
             <Link to="/">
