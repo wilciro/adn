@@ -1,15 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CustomTable tests should match style 1`] = `
-<div>
-  <header
-    class="sc-bczRLJ fQzRHj"
-  >
-    Ceiba
-  </header>
-</div>
-`;
-
 exports[`Footer tests should match style 1`] = `
 <div>
   <header

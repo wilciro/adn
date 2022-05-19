@@ -1,25 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`CustomTable tests should match snapshot CustomTable 1`] = `
-<div>
-  <div
-    class="sc-bczRLJ LwpKF"
-  >
-    <table
-      class="mantine-Table-root __mantine-ref-striped mantine-Table-striped __mantine-ref-hover mantine-Table-hover mantine-1fw2ryq"
-    >
-      <caption>
-        Hola mundo
-      </caption>
-      <thead>
-        <tr />
-      </thead>
-      <tbody />
-    </table>
-  </div>
-</div>
-`;
-
 exports[`CustomTable tests should match style 1`] = `
 <div>
   <div

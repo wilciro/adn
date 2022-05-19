@@ -40,8 +40,8 @@
     "build": "react-scripts build",
     "eject": "react-scripts eject",
     "test": "react-scripts test --watchAll=false",
-    "test:watch": "react-scripts test --watchAll",
-    "test:coverage": "react-scripts test --watchAll=false --coverage",
+    "test:watch": "react-scripts test --watchAll -u",
+    "test:coverage": "react-scripts test --watchAll=false --coverage -u",
     "lint": "eslint --fix src/**/*.{ts,tsx}",
     "server": "json-server --watch ./server/db.json --port 3001",
     "cypress": "cypress open"
