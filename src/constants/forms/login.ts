@@ -1,4 +1,4 @@
-import { CustomFormFieldProps, ValidateProps } from 'components/CustomForm';
+import { CustomFormFieldProps } from 'components/CustomForm';
 
 export const loginForm: Array<CustomFormFieldProps> = [
   {

@@ -16,14 +16,6 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('Static Code Analysis') {
-            steps {
-                echo '------------>Static code analysis<------------'
-                sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:vetapp-wilfer.ciro', 
-                sonarName:'"CeibaADN-VetApp(wilfer.ciro)"', 
-                sonarPathProperties:'./sonar-project.properties')
-            }
-        }
         stage('Unit testing') {
             steps {
                 echo '------------>Performing unit testing<------------'
@@ -35,6 +27,14 @@ pipeline {
             steps {
                 echo '------------>Performing e2e testing with cypress<------------'
                 sh 'npm run cypress'
+            }
+        }
+        stage('Static Code Analysis') {
+            steps {
+                echo '------------>Static code analysis<------------'
+                sonarqubeMasQualityGatesP(sonarKey:'co.com.ceiba.adn:vetapp-wilfer.ciro', 
+                sonarName:'"CeibaADN-VetApp(wilfer.ciro)"', 
+                sonarPathProperties:'./sonar-project.properties')
             }
         }
         stage('build') {
