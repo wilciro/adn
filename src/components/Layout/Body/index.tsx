@@ -1,5 +1,4 @@
 // React
-import { useMantineColorScheme } from '@mantine/core';
 import React from 'react';
 
 // Style
@@ -10,10 +9,7 @@ interface BodyProps {
 }
 
 const LayoutBody: React.FC<BodyProps> = ({ children }) => {
-  const { colorScheme } = useMantineColorScheme();
-  const dark = colorScheme === 'dark';
-
-  return <Body dark={dark}>{children}</Body>;
+  return <Body dark={false}>{children}</Body>;
 };
 
 export default LayoutBody;

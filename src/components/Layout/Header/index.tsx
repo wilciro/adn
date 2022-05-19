@@ -1,9 +1,9 @@
 // React
-import { ActionIcon, Button, useMantineColorScheme } from '@mantine/core';
+import { ActionIcon, Button } from '@mantine/core';
 import { SessionContext } from 'context/SessionContext';
 import React, { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Menu2, MoonStars, Sun } from 'tabler-icons-react';
+import { Menu2 } from 'tabler-icons-react';
 
 // Style
 import { ButtonsSeparator, Header, Nav, NavClose, NavMenu } from './style';
@@ -19,9 +19,6 @@ const LayoutHeader: React.FC = () => {
   const logged = username ?? false;
 
   const navigate = useNavigate();
-
-  const { colorScheme, toggleColorScheme } = useMantineColorScheme();
-  const dark = colorScheme === 'dark';
 
   const logout = () => {
     setUsername(undefined);
@@ -51,14 +48,6 @@ const LayoutHeader: React.FC = () => {
               <Button>Ingresar</Button>
             </Link>
           )}
-          <ActionIcon
-            variant="outline"
-            color={dark ? 'light' : 'dark'}
-            onClick={() => toggleColorScheme()}
-            title="Toggle color scheme"
-          >
-            {dark ? <Sun size={18} /> : <MoonStars size={18} />}
-          </ActionIcon>
         </ButtonsSeparator>
       </Header>
       <Nav open={openMenu}>

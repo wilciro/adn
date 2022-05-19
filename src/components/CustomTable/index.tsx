@@ -26,9 +26,11 @@ const CustomTable: React.FC<CustomTableProps> = ({
   const [rowsData, setRowsData] = useState<Array<object>>([]);
 
   const getData = async () => {
-    const data = await getTableData(endpoint);
-    if (data.valid) {
-      setRowsData(data.data || []);
+    if (endpoint.length > 0) {
+      const data = await getTableData(endpoint);
+      if (data.valid) {
+        setRowsData(data.data || []);
+      }
     }
   };
 
