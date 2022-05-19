@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 // Mantine
 import { Table } from '@mantine/core';
 import { getTableData } from 'services/tableService';
+import { TableResponsive } from './styles';
 
 interface HeaderModel {
     label: string,
@@ -37,7 +38,8 @@ const CustomTable: React.FC<CustomTableProps> = ({header, title, endpoint}) => {
     ));
 
     return (
-        <Table striped highlightOnHover>
+        <TableResponsive>
+            <Table striped highlightOnHover>
                 <caption>{title}</caption>
                 <thead>
                     <tr>
@@ -63,6 +65,7 @@ const CustomTable: React.FC<CustomTableProps> = ({header, title, endpoint}) => {
                     }    
                 </tbody>
             </Table>
+        </TableResponsive>
     );
 };
 

@@ -12,6 +12,8 @@ import LayoutBody from 'components/Layout/Body';
 import CustomRoutes from 'components/CustomRoutes';
 import { AppShell, ColorScheme, ColorSchemeProvider, MantineProvider } from '@mantine/core';
 import { useLocalStorage } from '@mantine/hooks';
+import ErrorBoundary from 'config/errors/GlobalErrorBoundary';
+import { SessionProvider } from 'context/SessionContext';
 
 const App: FC = () => {
   // const { data: { sessionId } } = useContext(SessionContext);
@@ -25,32 +27,30 @@ const App: FC = () => {
   };
     
   return (
-    <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
-      <MantineProvider
-        theme={{ 
-          colorScheme: 'dark', 
-          colors: {
-            brand: ['#F0BBDD', '#ED9BCF', '#EC7CC3', '#ED5DB8', '#F13EAF', '#F71FA7', '#FF00A1', '#E00890', '#C50E82','#AD1374' ],
-          },
-          primaryColor: 'brand'
-        }}
-        withGlobalStyles
-        withNormalizeCSS 
-      >
-      <BrowserRouter>
+      <ColorSchemeProvider colorScheme={colorScheme} toggleColorScheme={toggleColorScheme}>
+        <MantineProvider
+          theme={{ 
+            colorScheme: 'light', 
+            colors: {
+              brand: ['#F0BBDD', '#ED9BCF', '#EC7CC3', '#ED5DB8', '#F13EAF', '#F71FA7', '#FF00A1', '#E00890', '#C50E82','#AD1374' ],
+            },
+            primaryColor: 'brand'
+          }}
+          withGlobalStyles
+          withNormalizeCSS 
+        >
+        <BrowserRouter>
+          <ErrorBoundary>
+            <SessionProvider>
 
-        <AppShell
-          padding="md"
-          header={<LayoutHeader logged={false} />}
-          footer={<LayoutFooter />}
-          styles={(theme) => ({
-            main: { backgroundColor: theme.colorScheme === 'dark' ? theme.colors.dark[8] : theme.colors.gray[0] },
-          })}
-        > 
-          <LayoutBody>
-              <CustomRoutes />
-          </LayoutBody>
-        </AppShell>
+              <LayoutHeader />
+              <LayoutBody>
+                  <CustomRoutes />
+              </LayoutBody>
+              <LayoutFooter />
+
+            </SessionProvider>
+          </ErrorBoundary>
       </BrowserRouter>
         
       </MantineProvider>

@@ -3,15 +3,36 @@ import { Avatar, Box, Button, Space } from '@mantine/core';
 import { useForm } from '@mantine/form';
 import CustomForm from 'components/CustomForm';
 import { initialFormLogin, loginForm, validateFormLogin } from 'constants/forms/login';
-import React, { useRef } from 'react';
+import { SessionContext } from 'context/SessionContext';
+import React, { useContext, useRef, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { loginUser } from 'services/login.service';
 
 type typeCustomForm = React.ElementRef<typeof CustomForm>;
 
-export const LoginPage: React.FC = () => {
+const LoginPage: React.FC = () => {
+  const navigate = useNavigate();
+
+  const [loading, setLoading] = useState<boolean>(false)
+  const { mutations: {setUsername} } = useContext(SessionContext);
   const refForm = useRef<typeCustomForm>(null)
 
   const login = () => {
-    refForm.current?.onsubmit();
+    const dataForm = refForm.current?.onsubmit();
+    if(dataForm) {
+      setLoading(true)
+      const dataSend = {
+        "username" : dataForm?.username as string || "",
+        "password" : dataForm?.password as string || ""
+      }
+      loginUser(dataSend).then((valid: boolean) => {
+        setUsername(dataSend.username)
+        setLoading(false)
+        if(valid) {
+          navigate('/dashboard');
+        }
+      })
+    }
   }
 
   return (    
@@ -27,7 +48,9 @@ export const LoginPage: React.FC = () => {
         ref={refForm}
       />
       <Space h="md" />
-      <Button onClick={login}>Iniciar sesión</Button>
+      <Button onClick={login} loading={loading}>Iniciar sesión</Button>
     </Box>
   );
 };
+
+export default LoginPage

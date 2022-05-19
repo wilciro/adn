@@ -9,6 +9,7 @@ export const createSession = (username?: string): string => {
   localStorage.setItem(SESSION_IDENTIFIER, sessionId);
   return sessionId;
 };
+
 export const recoverSession = (): SessionState => {
   const sessionId = localStorage.getItem(SESSION_IDENTIFIER);
   if (!sessionId) {
@@ -19,3 +20,8 @@ export const recoverSession = (): SessionState => {
     username: sessionId.split(SESSION_SEPARATOR)[1],
   };
 };
+
+export const deleteSession = (): undefined => {
+  localStorage.removeItem(SESSION_IDENTIFIER)
+  return undefined
+}

@@ -5,14 +5,10 @@ import * as sessionService from '../services/sessionService';
 export const useStateContainer = (initialState: SessionState = {}) => {
   const [username, setUsername] = useState(initialState.username);
   const [sessionId, setSessionId] = useState(initialState.sessionId);
-  const usernameRef = useRef(false);
 
   useEffect(() => {
-    if (!usernameRef.current) {
-      usernameRef.current = true;
-      return;
-    }
     if (!username) {
+      setSessionId(sessionService.deleteSession());
       return;
     }
     setSessionId(sessionService.createSession(username));

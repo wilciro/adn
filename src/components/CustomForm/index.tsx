@@ -17,7 +17,7 @@ export interface CustomFormFieldProps {
 }
 
 export interface CustomFormHandleProps {
-  onsubmit: () => object | null,
+  onsubmit: () =>  {[key: string] : string | number | null | undefined} | null | Record<string, unknown>,
 }
 
 export interface ValidateProps {
@@ -69,12 +69,12 @@ const CustomForm: ForwardRefRenderFunction<CustomFormHandleProps, CustomFormProp
     return ret
   }
 
-  const onsubmit = (): object | null => {
-    console.log(form.validate())
-    if (form.errors) {
+  const onsubmit = (): {[key: string] : string | number | null | undefined} | null => {
+    form.validate()
+    if (Object.keys(form.errors).length > 0) {
       return null
     }
-    return form.values
+    return form.values as {[key: string] : string | number | null | undefined}
   }
 
   useImperativeHandle(ref, () => ({

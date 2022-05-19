@@ -12,7 +12,7 @@ export const apiExec = async ({
     body = {}
 }: ApiModel) => {
     try {
-        const response = await axios.get(`http://localhost:3001/${endpoint}`, {params: body});
+        const response = await axios.get(`${process.env.REACT_APP_HOST}/${endpoint}`, {params: body});
         if (response.status >= 200 && response.status < 300) {
             return {data: response.data, valid: true}
         }

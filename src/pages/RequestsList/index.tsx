@@ -5,15 +5,15 @@ import React from 'react';
 import CustomTable from 'components/CustomTable';
 import { requestListHeader } from 'constants/tables/request_list';
 
-export const RequestsListPage: React.FC = () => {
+const RequestsListPage: React.FC = () => {
 
-  return (
-    <div>      
-      <CustomTable 
-        title="Peticiones"
-        header={requestListHeader}
-        endpoint="requests"
-      />
-    </div>
+  return (  
+    <CustomTable 
+      title="Peticiones"
+      header={requestListHeader}
+      endpoint="requests"
+    />
   );
 };
+
+export default RequestsListPage
