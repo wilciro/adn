@@ -4,7 +4,7 @@ const OK_MAX = 300;
 const OK_MIN = 200;
 
 export interface ApiResponseModel {
-  data: Array<unknown> | null;
+  data: Array<object> | null;
   valid: boolean;
 }
 

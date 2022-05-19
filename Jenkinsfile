@@ -16,12 +16,6 @@ pipeline {
                 sh 'npm install'
             }
         }
-        stage('run server') {
-            steps {
-                echo "------------>Server<------------"
-                sh 'npm run server'
-            }
-        }
         stage('Unit testing') {
             steps {
                 echo '------------>Performing unit testing<------------'
@@ -29,12 +23,12 @@ pipeline {
                 sh 'npm run test'
             }
         }
-        stage('e2e testing') {
+        /* stage('e2e testing') {
             steps {
                 echo '------------>Performing e2e testing with cypress<------------'
                 sh 'npm run cypress'
             }
-        }
+        } */
         stage('Static Code Analysis') {
             steps {
                 echo '------------>Static code analysis<------------'

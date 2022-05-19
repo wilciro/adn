@@ -28,7 +28,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
   const getData = async () => {
     const data = await getTableData(endpoint);
     if (data.valid) {
-      setRowsData(data.data);
+      setRowsData(data.data || []);
     }
   };
 
