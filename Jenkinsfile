@@ -6,7 +6,7 @@ pipeline {
     }
 
     tools {
-        nodejs "NodeJS12"
+        nodejs "NodeJS14"
     }
 
     stages {
