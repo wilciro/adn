@@ -3,7 +3,7 @@ import { CustomFormFieldProps } from 'components/CustomForm';
 export const landingForm: Array<CustomFormFieldProps> = [
   {
     label: 'Nombre del dueño',
-    name: 'owner_name',
+    name: 'ownerName',
     placeholder: 'Ingrese el nombre del dueño',
     type: 'text',
     required: {
@@ -54,6 +54,6 @@ export const landingForm: Array<CustomFormFieldProps> = [
 ];
 
 export const validateFormLanding = {
-  owner_name: (value: string) => `${value}`.length + 1,
+  ownerName: (value: string) => `${value}`.length + 1,
   date: (value: string) => `${value}`.length + 1,
 };

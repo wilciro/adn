@@ -20,7 +20,7 @@ pipeline {
             steps {
                 echo '------------>Performing unit testing<------------'
                 sh 'node -v'
-                sh 'npm run test'
+                sh 'npm run test:coverage'
             }
         }
         /* stage('e2e testing') {
