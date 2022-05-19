@@ -4,6 +4,11 @@ pipeline {
     agent {
         label 'Slave_Induccion'
     }
+
+    tools {
+        nodejs "NodeJS 16.15.0"
+    }
+
     stages {
         stage('NPM Install') {
             steps {
@@ -22,6 +27,7 @@ pipeline {
         stage('Unit testing') {
             steps {
                 echo '------------>Performing unit testing<------------'
+                sh 'node -v'
                 sh 'npm run test'
             }
         }
