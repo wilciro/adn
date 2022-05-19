@@ -1,5 +1,4 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
 import { capitalize, formatPrice } from './text';
 
 describe('utils/text tests', () => {
