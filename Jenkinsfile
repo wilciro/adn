@@ -16,6 +16,12 @@ pipeline {
                 sh 'npm install'
             }
         }
+        stage('run server') {
+            steps {
+                echo "------------>Server<------------"
+                sh 'npm run server'
+            }
+        }
         stage('Unit testing') {
             steps {
                 echo '------------>Performing unit testing<------------'
