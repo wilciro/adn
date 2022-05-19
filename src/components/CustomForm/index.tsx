@@ -16,8 +16,10 @@ export interface CustomFormFieldProps {
   }
 }
 
+type SubmitType = string | number | null | undefined;
+
 export interface CustomFormHandleProps {
-  onsubmit: () =>  {[key: string] : string | number | null | undefined} | null | Record<string, unknown>,
+  onsubmit: () =>  {[key: string] : SubmitType} | null | Record<string, unknown>,
 }
 
 export interface ValidateProps {
@@ -28,7 +30,7 @@ interface CustomFormProps {
   initialValues: object;
   fields: Array<CustomFormFieldProps>;
   validate: object
-};
+}
 
 const CustomForm: ForwardRefRenderFunction<CustomFormHandleProps, CustomFormProps> = ({
   initialValues = {},
@@ -51,7 +53,7 @@ const CustomForm: ForwardRefRenderFunction<CustomFormHandleProps, CustomFormProp
           label={field.label}
           placeholder={field.placeholder || field.label}
           {...form.getInputProps(field.name as never)}
-        />
+        />;
         break;
       case 'password':
         ret = <PasswordInput
@@ -59,7 +61,7 @@ const CustomForm: ForwardRefRenderFunction<CustomFormHandleProps, CustomFormProp
           label={field.label}
           placeholder={field.placeholder || field.label}
           {...form.getInputProps(field.name as never)}
-        />
+        />;
         break;
       default:
         break;
@@ -68,12 +70,12 @@ const CustomForm: ForwardRefRenderFunction<CustomFormHandleProps, CustomFormProp
     return ret;
   };
 
-  const onsubmit = (): {[key: string] : string | number | null | undefined} | null => {
+  const onsubmit = (): {[key: string] : SubmitType} | null => {
     form.validate();
     if (Object.keys(form.errors).length > 0) {
       return null;
     }
-    return form.values as {[key: string] : string | number | null | undefined};
+    return form.values as {[key: string] : SubmitType};
   };
 
   useImperativeHandle(ref, () => ({
@@ -84,7 +86,7 @@ const CustomForm: ForwardRefRenderFunction<CustomFormHandleProps, CustomFormProp
     <form>
       {
         fields.map((field: CustomFormFieldProps, index: number) => {
-          return <div key={`field-${field.name}`}>{getField(field)}</div>
+          return (<div key={`field-${field.name}`}>{getField(field)}</div>);
         })
       }        
     </form>

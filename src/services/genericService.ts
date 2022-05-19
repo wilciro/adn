@@ -7,7 +7,7 @@ export interface ApiModel {
     endpoint: string,
     method?: string,
     body?: object
-};
+}
 
 export const apiExec = async ({
     endpoint,

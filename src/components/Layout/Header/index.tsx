@@ -79,6 +79,6 @@ const LayoutHeader: React.FC = () => {
             </Nav>
         </>
     );
-}
+};
 
 export default LayoutHeader;

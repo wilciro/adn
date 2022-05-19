@@ -1,16 +1,9 @@
-import React, { useRef } from 'react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import React from 'react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import CustomForm from '.';
 import { initialFormLogin, loginForm, validateFormLogin } from '../../constants/forms/login';
 
 describe('CustomForm tests', () => {
-  let onQuantityChange: jest.Mock;
-  let quantity: number;
-
-  beforeEach(() => {
-    onQuantityChange = jest.fn();
-    quantity = 1;
-  });
 
   it('should match snapshot', () => {
     const { container } = render(
@@ -52,7 +45,7 @@ describe('CustomForm tests', () => {
         current: {
             onsubmit: jest.fn()
         }
-    }
+    };
     render(
         <div>
             <CustomForm
@@ -64,7 +57,7 @@ describe('CustomForm tests', () => {
             <button type="submit" data-testid="login-btn" onClick={e => refForm.current?.onsubmit()}>Login</button>
         </div>,
     );
-    fireEvent.click(screen.getByTestId('login-btn'))
+    fireEvent.click(screen.getByTestId('login-btn'));
     expect(screen.getByText('Por favor ingrese el nombre de usuario')).toBeTruthy();
     expect(screen.getByText('Por favor ingrese la contraseña')).toBeTruthy();
   });
@@ -74,7 +67,7 @@ describe('CustomForm tests', () => {
         current: {
             onsubmit: jest.fn()
         }
-    }
+    };
     render(
         <div>
             <CustomForm
@@ -86,10 +79,10 @@ describe('CustomForm tests', () => {
             <button type="submit" data-testid="login-btn" onClick={e => refForm.current?.onsubmit()}>Login</button>
         </div>,
     );
-    fireEvent.change(screen.getByTestId(loginForm[0].label), {target: {value: 'admin'}})
-    fireEvent.change(screen.getByTestId(loginForm[1].label), {target: {value: 'admin'}})
+    fireEvent.change(screen.getByTestId(loginForm[0].label), {target: {value: 'admin'}});
+    fireEvent.change(screen.getByTestId(loginForm[1].label), {target: {value: 'admin'}});
 
-    fireEvent.click(screen.getByTestId('login-btn'))
+    fireEvent.click(screen.getByTestId('login-btn'));
     expect(screen.queryByText('Por favor ingrese el nombre de usuario')).toBeNull();
     expect(screen.queryByText('Por favor ingrese la contraseña')).toBeNull();
   });

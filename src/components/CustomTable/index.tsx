@@ -31,7 +31,7 @@ const CustomTable: React.FC<CustomTableProps> = ({header, title, endpoint}) => {
     
     useEffect(() => {
         getData();
-    }, [])
+    }, []);
 
     const ths = header.map((item: HeaderModel, index: number) => (
         <th key={`header-${item.row}`}>{item.label}</th>
@@ -52,11 +52,11 @@ const CustomTable: React.FC<CustomTableProps> = ({header, title, endpoint}) => {
                             return (
                                 <tr key={`column-${index}`}>
                                     {
-                                        header.map((itemHeader: HeaderModel, indexHeader: number) => {
-                                            if (itemHeader.format)  {
-                                                return <td key={`row-${index}-${indexHeader}`}>{itemHeader.format(itemHeader.row in row ? row[itemHeader.row as keyof typeof row] : "")}</td>
+                                        header.map((itemH: HeaderModel, iHead: number) => {
+                                            if (itemH.format)  {
+                                                return <td key={`${index}-${iHead}`}>{itemH.format(itemH.row in row ? row[itemH.row as keyof typeof row] : '')}</td>
                                             }
-                                            return <td key={`row-${index}-${indexHeader}`}>{itemHeader.row in row ? row[itemHeader.row as keyof typeof row] : ""}</td>
+                                            return <td key={`${index}-${iHead}`}>{itemH.row in row ? row[itemH.row as keyof typeof row] : ''}</td>
                                         })
                                     }
                                 </tr>

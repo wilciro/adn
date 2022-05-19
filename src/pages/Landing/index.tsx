@@ -1,8 +1,8 @@
 // React
-import { Box, Button, Space } from '@mantine/core'
-import CustomForm from 'components/CustomForm'
-import { landingForm, validateFormLanding } from 'constants/forms/landing'
-import React, { FC, useRef } from 'react'
+import { Box, Button, Space } from '@mantine/core';
+import CustomForm from 'components/CustomForm';
+import { landingForm, validateFormLanding } from 'constants/forms/landing';
+import React, { FC, useRef } from 'react';
 
 type typeCustomForm = React.ElementRef<typeof CustomForm>;
 

@@ -1,6 +1,6 @@
 // React
 import { Box } from '@mantine/core'
-import React, { FC } from "react"
+import React, { FC } from 'react';
 
 const AboutPage: FC = () => {
     

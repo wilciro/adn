@@ -21,8 +21,8 @@ const LoginPage: React.FC = () => {
     if(dataForm) {
       setLoading(true);
       const dataSend = {
-        'username' : dataForm?.username as string || "",
-        'password' : dataForm?.password as string || ""
+        'username' : dataForm?.username as string || '',
+        'password' : dataForm?.password as string || ''
       };
       loginUser(dataSend).then((valid: boolean) => {
         setLoading(false);
@@ -32,7 +32,7 @@ const LoginPage: React.FC = () => {
         }
       });
     }
-  }
+  };
 
   return (    
     <Box sx={{ maxWidth: 350 }} mx="auto">

@@ -1,7 +1,7 @@
-import { Button, Paper, Space, Text } from "@mantine/core";
-import React, { Component, ErrorInfo, ReactNode } from "react";
-import { Link } from "react-router-dom";
-import { Container } from "./style";
+import { Button, Paper, Space, Text } from '@mantine/core';
+import React, { Component, ReactNode } from 'react';
+import { Link } from 'react-router-dom';
+import { Container } from './style';
 
 interface Props {
   children: ReactNode;
