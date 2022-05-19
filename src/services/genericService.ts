@@ -3,6 +3,11 @@ import axios from 'axios';
 const OK_MAX = 300;
 const OK_MIN = 200;
 
+export interface ApiResponseModel {
+  data: Array<unknown> | null;
+  valid: boolean;
+}
+
 export interface ApiModel {
   endpoint: string;
   method?: string;
@@ -13,7 +18,7 @@ export const apiExec = async ({
   endpoint,
   method = 'GET',
   body = {},
-}: ApiModel) => {
+}: ApiModel): Promise<ApiResponseModel> => {
   try {
     const response = await axios.get(
       `${process.env.REACT_APP_HOST}/${endpoint}`,
