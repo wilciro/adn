@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useRef, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import { SessionState } from 'context/models/SessionState';
 import * as sessionService from '../services/sessionService';
 

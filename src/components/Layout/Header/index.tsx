@@ -33,14 +33,19 @@ const LayoutHeader: React.FC = () => {
     <>
       <Header>
         <ButtonsSeparator>
-          <ActionIcon variant="outline" title="Menú" onClick={toggleMenu}>
+          <ActionIcon
+            variant="outline"
+            title="Menú"
+            onClick={toggleMenu}
+            data-testid="btn-nav-menu"
+          >
             <Menu2 size={18} />
           </ActionIcon>
           Icon
         </ButtonsSeparator>
         <ButtonsSeparator>
           {logged ? (
-            <Button onClick={logout} id="header-logout-link">
+            <Button onClick={logout} data-testid="header-logout-link">
               Salir
             </Button>
           ) : (
@@ -50,7 +55,7 @@ const LayoutHeader: React.FC = () => {
           )}
         </ButtonsSeparator>
       </Header>
-      <Nav open={openMenu}>
+      <Nav open={openMenu} data-testid="nav-menu">
         <NavClose onClick={toggleMenu}>X</NavClose>
         <NavMenu>
           <li>

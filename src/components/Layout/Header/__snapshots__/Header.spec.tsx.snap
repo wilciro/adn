@@ -10,6 +10,7 @@ exports[`Header tests should match snapshot Header 1`] = `
     >
       <button
         class="mantine-ActionIcon-outline mantine-ActionIcon-root mantine-17oahn4"
+        data-testid="btn-nav-menu"
         title="Menú"
         type="button"
       >
@@ -78,6 +79,7 @@ exports[`Header tests should match snapshot Header 1`] = `
   </header>
   <nav
     class="sc-dkzDqf JmMFC"
+    data-testid="nav-menu"
   >
     <button
       class="sc-eCYdqJ gSDwKK"

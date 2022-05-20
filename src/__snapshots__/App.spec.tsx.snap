@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App tests should match snapshot App 1`] = `
+<div>
+  <header
+    class="sc-bczRLJ eJfard"
+  >
+    <div
+      class="sc-gsnTZi hPHiZC"
+    >
+      <button
+        class="mantine-ActionIcon-outline mantine-ActionIcon-root mantine-1vwup68"
+        data-testid="btn-nav-menu"
+        title="Menú"
+        type="button"
+      >
+        <svg
+          class="icon icon-tabler icon-tabler-menu-2"
+          fill="none"
+          height="18"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          width="18"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+            stroke="none"
+          />
+          <line
+            x1="4"
+            x2="20"
+            y1="6"
+            y2="6"
+          />
+          <line
+            x1="4"
+            x2="20"
+            y1="12"
+            y2="12"
+          />
+          <line
+            x1="4"
+            x2="20"
+            y1="18"
+            y2="18"
+          />
+        </svg>
+      </button>
+      Icon
+    </div>
+    <div
+      class="sc-gsnTZi hPHiZC"
+    >
+      <a
+        href="/login"
+        id="header-login-link"
+      >
+        <button
+          class="mantine-Button-filled mantine-Button-root mantine-mfakvh"
+          type="button"
+        >
+          <div
+            class="mantine-3xbgk5 mantine-Button-inner"
+          >
+            <span
+              class="mantine-qo1k2 mantine-Button-label"
+            >
+              Ingresar
+            </span>
+          </div>
+        </button>
+      </a>
+    </div>
+  </header>
+  <nav
+    class="sc-dkzDqf JmMFC"
+    data-testid="nav-menu"
+  >
+    <button
+      class="sc-eCYdqJ gSDwKK"
+    >
+      X
+    </button>
+    <ul
+      class="sc-hKMtZM kfbvbw"
+    >
+      <li>
+        <a
+          href="/"
+        >
+          Inicio
+        </a>
+      </li>
+      <li>
+        <a
+          href="/about"
+        >
+          Acerca de la app
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <div
+    class="sc-gKXOVf leHwAx"
+  >
+    <div
+      class="mantine-yv0or0"
+    >
+      <h2>
+        Solicitud de cita veterinaria
+      </h2>
+      <p>
+        Diligencia todos los campos para asignar la cita
+      </p>
+      <div
+        class="mantine-1ne3752"
+      />
+      <form>
+        <div>
+          <div
+            class="mantine-TextInput-root mantine-1m3pqry"
+          >
+            <label
+              class="mantine-1w07r5r mantine-TextInput-label"
+              for="mantine-tkkz0taw1"
+              id="mantine-tkkz0taw1-label"
+            >
+              Nombre del dueño
+              <span
+                aria-hidden="true"
+                class="mantine-1m203yh mantine-TextInput-required"
+              >
+                 *
+              </span>
+            </label>
+            <div
+              class="mantine-TextInput-wrapper mantine-12sbrde"
+            >
+              <input
+                aria-invalid="false"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                data-testid="Nombre del dueño"
+                id="mantine-tkkz0taw1"
+                placeholder="Ingrese el nombre del dueño"
+                required=""
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="mantine-TextInput-root mantine-1m3pqry"
+          >
+            <label
+              class="mantine-1w07r5r mantine-TextInput-label"
+              for="mantine-z1ewwz97q"
+              id="mantine-z1ewwz97q-label"
+            >
+              Documento del dueño
+              <span
+                aria-hidden="true"
+                class="mantine-1m203yh mantine-TextInput-required"
+              >
+                 *
+              </span>
+            </label>
+            <div
+              class="mantine-TextInput-wrapper mantine-12sbrde"
+            >
+              <input
+                aria-invalid="false"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                data-testid="Documento del dueño"
+                id="mantine-z1ewwz97q"
+                placeholder="Ingrese el documento del dueño"
+                required=""
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="mantine-TextInput-root mantine-1m3pqry"
+          >
+            <label
+              class="mantine-1w07r5r mantine-TextInput-label"
+              for="mantine-h9j5kp1lx"
+              id="mantine-h9j5kp1lx-label"
+            >
+              Nombre de la mascota
+              <span
+                aria-hidden="true"
+                class="mantine-1m203yh mantine-TextInput-required"
+              >
+                 *
+              </span>
+            </label>
+            <div
+              class="mantine-TextInput-wrapper mantine-12sbrde"
+            >
+              <input
+                aria-invalid="false"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                data-testid="Nombre de la mascota"
+                id="mantine-h9j5kp1lx"
+                placeholder="Ingrese el nombre de la mascota"
+                required=""
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="mantine-TextInput-root mantine-1m3pqry"
+          >
+            <label
+              class="mantine-1w07r5r mantine-TextInput-label"
+              for="mantine-0jidti09k"
+              id="mantine-0jidti09k-label"
+            >
+              Edad de la mascota
+              <span
+                aria-hidden="true"
+                class="mantine-1m203yh mantine-TextInput-required"
+              >
+                 *
+              </span>
+            </label>
+            <div
+              class="mantine-TextInput-wrapper mantine-12sbrde"
+            >
+              <input
+                aria-invalid="false"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                data-testid="Edad de la mascota"
+                id="mantine-0jidti09k"
+                placeholder="Ingrese la edad de la mascota"
+                required=""
+                type="text"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="mantine-TextInput-root mantine-1m3pqry"
+          >
+            <label
+              class="mantine-1w07r5r mantine-TextInput-label"
+              for="mantine-fu2xwu1wf"
+              id="mantine-fu2xwu1wf-label"
+            >
+              Fecha de la cita
+              <span
+                aria-hidden="true"
+                class="mantine-1m203yh mantine-TextInput-required"
+              >
+                 *
+              </span>
+            </label>
+            <div
+              class="mantine-TextInput-wrapper mantine-12sbrde"
+            >
+              <input
+                aria-invalid="false"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                data-testid="Fecha de la cita"
+                id="mantine-fu2xwu1wf"
+                placeholder="Seleccione la fecha de la cita"
+                required=""
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </form>
+      <div
+        class="mantine-1ne3752"
+      />
+      <button
+        class="mantine-Button-filled mantine-Button-root mantine-mfakvh"
+        data-testid="register-btn"
+        type="button"
+      >
+        <div
+          class="mantine-3xbgk5 mantine-Button-inner"
+        >
+          <span
+            class="mantine-qo1k2 mantine-Button-label"
+          >
+            Registrar
+          </span>
+        </div>
+      </button>
+    </div>
+  </div>
+  <header
+    class="sc-jSMfEi dFwEwe"
+  >
+    Ceiba software 2022
+  </header>
+</div>
+`;

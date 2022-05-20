@@ -8,7 +8,7 @@ export default createGlobalStyle`
     background: rgba(30, 30, 30, 0.05)
   }
   * {
-        box-sizing: border-box;
+    box-sizing: border-box;
   }
   :root {
     --primary-color: purple;

@@ -1,5 +1,204 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`CustomRoutes tests should match login routes 1`] = `
+<div>
+  <div
+    class="mantine-yv0or0"
+  >
+    <h2>
+      Solicitud de cita veterinaria
+    </h2>
+    <p>
+      Diligencia todos los campos para asignar la cita
+    </p>
+    <div
+      class="mantine-1ne3752"
+    />
+    <form>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-tih9ik7sd"
+            id="mantine-tih9ik7sd-label"
+          >
+            Nombre del dueño
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Nombre del dueño"
+              id="mantine-tih9ik7sd"
+              placeholder="Ingrese el nombre del dueño"
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-f0ge1zepi"
+            id="mantine-f0ge1zepi-label"
+          >
+            Documento del dueño
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Documento del dueño"
+              id="mantine-f0ge1zepi"
+              placeholder="Ingrese el documento del dueño"
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-6qn9ss8jl"
+            id="mantine-6qn9ss8jl-label"
+          >
+            Nombre de la mascota
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Nombre de la mascota"
+              id="mantine-6qn9ss8jl"
+              placeholder="Ingrese el nombre de la mascota"
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-vbs288y3x"
+            id="mantine-vbs288y3x-label"
+          >
+            Edad de la mascota
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Edad de la mascota"
+              id="mantine-vbs288y3x"
+              placeholder="Ingrese la edad de la mascota"
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-ervtzm25b"
+            id="mantine-ervtzm25b-label"
+          >
+            Fecha de la cita
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Fecha de la cita"
+              id="mantine-ervtzm25b"
+              placeholder="Seleccione la fecha de la cita"
+              required=""
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+    <div
+      class="mantine-1ne3752"
+    />
+    <button
+      class="mantine-Button-filled mantine-Button-root mantine-1grzg0q"
+      data-testid="register-btn"
+      type="button"
+    >
+      <div
+        class="mantine-3xbgk5 mantine-Button-inner"
+      >
+        <span
+          class="mantine-qo1k2 mantine-Button-label"
+        >
+          Registrar
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
 exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
 <div>
   <div
@@ -21,8 +220,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-wkr3zea2h"
-            id="mantine-wkr3zea2h-label"
+            for="mantine-if9pmzghg"
+            id="mantine-if9pmzghg-label"
           >
             Nombre del dueño
             <span
@@ -39,7 +238,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Nombre del dueño"
-              id="mantine-wkr3zea2h"
+              id="mantine-if9pmzghg"
               placeholder="Ingrese el nombre del dueño"
               required=""
               type="text"
@@ -53,8 +252,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-ooh4xo22d"
-            id="mantine-ooh4xo22d-label"
+            for="mantine-58fppt1z1"
+            id="mantine-58fppt1z1-label"
           >
             Documento del dueño
             <span
@@ -71,7 +270,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Documento del dueño"
-              id="mantine-ooh4xo22d"
+              id="mantine-58fppt1z1"
               placeholder="Ingrese el documento del dueño"
               required=""
               type="text"
@@ -85,8 +284,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-sztcvns1a"
-            id="mantine-sztcvns1a-label"
+            for="mantine-6h1hqzocg"
+            id="mantine-6h1hqzocg-label"
           >
             Nombre de la mascota
             <span
@@ -103,7 +302,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Nombre de la mascota"
-              id="mantine-sztcvns1a"
+              id="mantine-6h1hqzocg"
               placeholder="Ingrese el nombre de la mascota"
               required=""
               type="text"
@@ -117,8 +316,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-2eivrhcyp"
-            id="mantine-2eivrhcyp-label"
+            for="mantine-et9p66tr7"
+            id="mantine-et9p66tr7-label"
           >
             Edad de la mascota
             <span
@@ -135,7 +334,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Edad de la mascota"
-              id="mantine-2eivrhcyp"
+              id="mantine-et9p66tr7"
               placeholder="Ingrese la edad de la mascota"
               required=""
               type="text"
@@ -149,8 +348,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-7hpx1ghbx"
-            id="mantine-7hpx1ghbx-label"
+            for="mantine-y6rbkqmwc"
+            id="mantine-y6rbkqmwc-label"
           >
             Fecha de la cita
             <span
@@ -167,7 +366,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Fecha de la cita"
-              id="mantine-7hpx1ghbx"
+              id="mantine-y6rbkqmwc"
               placeholder="Seleccione la fecha de la cita"
               required=""
               type="text"

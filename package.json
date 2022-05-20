@@ -32,8 +32,7 @@
     "@types/styled-components": "^5.1.25",
     "@types/uuid": "^8.3.4",
     "cypress": "^9.6.1",
-    "prettier": "^2.6.2",
-    "react-test-renderer": "^18.1.0"
+    "prettier": "^2.6.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,6 +44,16 @@
     "lint": "eslint --fix src/**/*.{ts,tsx}",
     "server": "json-server --watch ./server/db.json --port 3001",
     "cypress": "cypress open"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,ts,tsx}",
+      "!src/**/*.d.ts",
+      "!src/index.tsx",
+      "!src/serviceWorker.ts",
+      "!src/reportWebVitals.ts",
+      "!src/styles/global/global.ts"
+    ]
   },
   "eslintConfig": {
     "extends": [

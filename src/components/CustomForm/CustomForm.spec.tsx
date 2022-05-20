@@ -43,7 +43,9 @@ describe('CustomForm tests', () => {
         <button
           type="submit"
           data-testid="login-btn"
-          onClick={(e) => refForm.current?.onsubmit()}
+          onClick={(e) => {
+            const test = refForm.current?.onsubmit();
+          }}
         >
           Login
         </button>
@@ -65,7 +67,19 @@ describe('CustomForm tests', () => {
     render(
       <div>
         <CustomForm
-          fields={loginForm}
+          fields={[
+            ...loginForm,
+            {
+              label: 'Test',
+              type: 'no_exists',
+              name: 'test',
+              placeholder: 'test',
+              required: {
+                value: false,
+                message: 'hola mundo',
+              },
+            },
+          ]}
           validate={validateFormLogin}
           initialValues={initialFormLogin}
           ref={refForm}
