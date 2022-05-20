@@ -16,14 +16,16 @@ export interface CustomTableProps {
   header: Array<HeaderModel>;
   title: string;
   endpoint: string;
+  rows?: Array<object>;
 }
 
 const CustomTable: React.FC<CustomTableProps> = ({
   header,
   title,
   endpoint,
+  rows = [],
 }) => {
-  const [rowsData, setRowsData] = useState<Array<object>>([]);
+  const [rowsData, setRowsData] = useState<Array<object>>(rows);
 
   const getData = async () => {
     if (endpoint.length > 0) {
@@ -80,6 +82,10 @@ const CustomTable: React.FC<CustomTableProps> = ({
       </Table>
     </TableResponsive>
   );
+};
+
+CustomTable.defaultProps = {
+  rows: [],
 };
 
 export default CustomTable;

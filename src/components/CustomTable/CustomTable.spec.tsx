@@ -15,6 +15,17 @@ describe('CustomTable tests', () => {
         header={requestListHeader}
         title="Hola mundo"
         endpoint="requests"
+        rows={[
+          {
+            owner_document: '1097040584',
+            owner_name: 'Wilfer Daniel Ciro Maya',
+            pet_name: 'Ciri',
+            pet_type: 'gato',
+            pet_age: 1,
+            date: '2022-05-23 02:00:00',
+            price: 50000,
+          },
+        ]}
       />,
     );
 

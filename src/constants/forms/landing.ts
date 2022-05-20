@@ -54,6 +54,7 @@ export const landingForm: Array<CustomFormFieldProps> = [
 ];
 
 export const validateFormLanding = {
-  ownerName: (value: string) => `${value}`.length + 1,
+  ownerName: (value: string) =>
+    `${value}`.length > 0 ? null : 'Por favor ingrese el nombre del dueño',
   date: (value: string) => `${value}`.length + 1,
 };

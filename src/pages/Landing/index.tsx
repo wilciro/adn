@@ -25,7 +25,9 @@ const LandingPage: FC = () => {
         ref={refForm}
       />
       <Space h="md" />
-      <Button onClick={register}>Registrar</Button>
+      <Button onClick={register} data-testid="register-btn">
+        Registrar
+      </Button>
     </Box>
   );
 };
