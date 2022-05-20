@@ -1,5 +1,0 @@
-{
-    "testRunner": "jest",
-    "checkers": ["typescript"],
-    "tsconfigFile": "tsconfig.json"
-}
