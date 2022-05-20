@@ -73,11 +73,6 @@ describe('CustomForm tests', () => {
               label: 'Test',
               type: 'no_exists',
               name: 'test',
-              placeholder: 'test',
-              required: {
-                value: false,
-                message: 'hola mundo',
-              },
             },
           ]}
           validate={validateFormLogin}

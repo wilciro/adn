@@ -32,8 +32,8 @@ exports[`LoginPage tests should match snapshot LoginPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-ins3xltj1"
-            id="mantine-ins3xltj1-label"
+            for="mantine-ljcncj1c4"
+            id="mantine-ljcncj1c4-label"
           >
             Nombre de usuario
             <span
@@ -50,7 +50,7 @@ exports[`LoginPage tests should match snapshot LoginPage 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Nombre de usuario"
-              id="mantine-ins3xltj1"
+              id="mantine-ljcncj1c4"
               placeholder="Ingrese el nombre de usuario"
               required=""
               type="text"
@@ -65,8 +65,8 @@ exports[`LoginPage tests should match snapshot LoginPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-PasswordInput-label"
-            for="mantine-x2stde5it"
-            id="mantine-x2stde5it-label"
+            for="mantine-8d09evihn"
+            id="mantine-8d09evihn-label"
           >
             Contraseña
           </label>
@@ -80,7 +80,7 @@ exports[`LoginPage tests should match snapshot LoginPage 1`] = `
               <input
                 class="mantine-164y8ej mantine-PasswordInput-innerInput"
                 data-testid="Contraseña"
-                id="mantine-x2stde5it"
+                id="mantine-8d09evihn"
                 placeholder="Ingrese la contraseña"
                 type="password"
                 value=""

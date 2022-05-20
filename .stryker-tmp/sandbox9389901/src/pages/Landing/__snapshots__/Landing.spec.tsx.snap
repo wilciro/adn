@@ -1,0 +1,200 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AboutPage tests should match snapshot AboutPage 1`] = `
+<div>
+  <div
+    class="mantine-yv0or0"
+  >
+    <h2>
+      Solicitud de cita veterinaria
+    </h2>
+    <p>
+      Diligencia todos los campos para asignar la cita
+    </p>
+    <div
+      class="mantine-1ne3752"
+    />
+    <form>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-ch36oo7el"
+            id="mantine-ch36oo7el-label"
+          >
+            Nombre del dueño
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Nombre del dueño"
+              id="mantine-ch36oo7el"
+              placeholder="Ingrese el nombre del dueño"
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-0b8377s66"
+            id="mantine-0b8377s66-label"
+          >
+            Documento del dueño
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Documento del dueño"
+              id="mantine-0b8377s66"
+              placeholder="Ingrese el documento del dueño"
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-ph7paz848"
+            id="mantine-ph7paz848-label"
+          >
+            Nombre de la mascota
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Nombre de la mascota"
+              id="mantine-ph7paz848"
+              placeholder="Ingrese el nombre de la mascota"
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-l5cawfoxj"
+            id="mantine-l5cawfoxj-label"
+          >
+            Edad de la mascota
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Edad de la mascota"
+              id="mantine-l5cawfoxj"
+              placeholder="Ingrese la edad de la mascota"
+              required=""
+              type="text"
+            />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-TextInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TextInput-label"
+            for="mantine-w1lmsuz1k"
+            id="mantine-w1lmsuz1k-label"
+          >
+            Fecha de la cita
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TextInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TextInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
+              data-testid="Fecha de la cita"
+              id="mantine-w1lmsuz1k"
+              placeholder="Seleccione la fecha de la cita"
+              required=""
+              type="text"
+              value=""
+            />
+          </div>
+        </div>
+      </div>
+    </form>
+    <div
+      class="mantine-1ne3752"
+    />
+    <button
+      class="mantine-Button-filled mantine-Button-root mantine-1grzg0q"
+      data-testid="register-btn"
+      type="button"
+    >
+      <div
+        class="mantine-3xbgk5 mantine-Button-inner"
+      >
+        <span
+          class="mantine-qo1k2 mantine-Button-label"
+        >
+          Registrar
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

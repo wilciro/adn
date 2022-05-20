@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Body tests should match style 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ ijXBTN"
+  >
+    Ceiba
+  </div>
+</div>
+`;

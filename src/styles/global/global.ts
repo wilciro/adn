@@ -11,7 +11,7 @@ export default createGlobalStyle`
     box-sizing: border-box;
   }
   :root {
-    --primary-color: purple;
+    --primary-color: #10d35f;
     --font-color: #1E1E1E;
     --secondary-font-color: #76819D;
     --bg-color: #F0F2F5;
@@ -20,7 +20,7 @@ export default createGlobalStyle`
     --border-color: #FFF;
 	}
   [data-theme="dark"] {
-    --primary-color: purple;
+    --primary-color: #10d35f;
     --font-color: #CCD6F6;
     --secondary-font-color: #76819D;
     --bg-color: #181719;

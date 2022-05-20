@@ -13,8 +13,8 @@ export interface CustomFormFieldProps {
   type: string;
   name: string;
   label: string;
-  placeholder: string;
-  required: {
+  placeholder?: string;
+  required?: {
     value: boolean;
     message: string;
   };

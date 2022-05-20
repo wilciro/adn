@@ -82,12 +82,12 @@ exports[`Header tests should match snapshot Header 1`] = `
     data-testid="nav-menu"
   >
     <button
-      class="sc-eCYdqJ gSDwKK"
+      class="sc-eCYdqJ kgffIQ"
     >
       X
     </button>
     <ul
-      class="sc-hKMtZM kfbvbw"
+      class="sc-hKMtZM jUMTUe"
     >
       <li>
         <a

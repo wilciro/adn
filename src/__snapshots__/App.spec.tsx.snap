@@ -9,7 +9,7 @@ exports[`App tests should match snapshot App 1`] = `
       class="sc-gsnTZi hPHiZC"
     >
       <button
-        class="mantine-ActionIcon-outline mantine-ActionIcon-root mantine-1vwup68"
+        class="mantine-ActionIcon-outline mantine-ActionIcon-root mantine-inevqw"
         data-testid="btn-nav-menu"
         title="Menú"
         type="button"
@@ -61,7 +61,7 @@ exports[`App tests should match snapshot App 1`] = `
         id="header-login-link"
       >
         <button
-          class="mantine-Button-filled mantine-Button-root mantine-mfakvh"
+          class="mantine-Button-filled mantine-Button-root mantine-14wtse4"
           type="button"
         >
           <div
@@ -82,12 +82,12 @@ exports[`App tests should match snapshot App 1`] = `
     data-testid="nav-menu"
   >
     <button
-      class="sc-eCYdqJ gSDwKK"
+      class="sc-eCYdqJ kgffIQ"
     >
       X
     </button>
     <ul
-      class="sc-hKMtZM kfbvbw"
+      class="sc-hKMtZM jUMTUe"
     >
       <li>
         <a
@@ -127,8 +127,8 @@ exports[`App tests should match snapshot App 1`] = `
           >
             <label
               class="mantine-1w07r5r mantine-TextInput-label"
-              for="mantine-tkkz0taw1"
-              id="mantine-tkkz0taw1-label"
+              for="mantine-vxud2tsgb"
+              id="mantine-vxud2tsgb-label"
             >
               Nombre del dueño
               <span
@@ -143,9 +143,9 @@ exports[`App tests should match snapshot App 1`] = `
             >
               <input
                 aria-invalid="false"
-                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-162fluf"
                 data-testid="Nombre del dueño"
-                id="mantine-tkkz0taw1"
+                id="mantine-vxud2tsgb"
                 placeholder="Ingrese el nombre del dueño"
                 required=""
                 type="text"
@@ -159,8 +159,8 @@ exports[`App tests should match snapshot App 1`] = `
           >
             <label
               class="mantine-1w07r5r mantine-TextInput-label"
-              for="mantine-z1ewwz97q"
-              id="mantine-z1ewwz97q-label"
+              for="mantine-htx0eq53x"
+              id="mantine-htx0eq53x-label"
             >
               Documento del dueño
               <span
@@ -175,9 +175,9 @@ exports[`App tests should match snapshot App 1`] = `
             >
               <input
                 aria-invalid="false"
-                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-162fluf"
                 data-testid="Documento del dueño"
-                id="mantine-z1ewwz97q"
+                id="mantine-htx0eq53x"
                 placeholder="Ingrese el documento del dueño"
                 required=""
                 type="text"
@@ -191,8 +191,8 @@ exports[`App tests should match snapshot App 1`] = `
           >
             <label
               class="mantine-1w07r5r mantine-TextInput-label"
-              for="mantine-h9j5kp1lx"
-              id="mantine-h9j5kp1lx-label"
+              for="mantine-wyj4a2boi"
+              id="mantine-wyj4a2boi-label"
             >
               Nombre de la mascota
               <span
@@ -207,9 +207,9 @@ exports[`App tests should match snapshot App 1`] = `
             >
               <input
                 aria-invalid="false"
-                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-162fluf"
                 data-testid="Nombre de la mascota"
-                id="mantine-h9j5kp1lx"
+                id="mantine-wyj4a2boi"
                 placeholder="Ingrese el nombre de la mascota"
                 required=""
                 type="text"
@@ -223,8 +223,8 @@ exports[`App tests should match snapshot App 1`] = `
           >
             <label
               class="mantine-1w07r5r mantine-TextInput-label"
-              for="mantine-0jidti09k"
-              id="mantine-0jidti09k-label"
+              for="mantine-o8ak3lzxw"
+              id="mantine-o8ak3lzxw-label"
             >
               Edad de la mascota
               <span
@@ -239,9 +239,9 @@ exports[`App tests should match snapshot App 1`] = `
             >
               <input
                 aria-invalid="false"
-                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-162fluf"
                 data-testid="Edad de la mascota"
-                id="mantine-0jidti09k"
+                id="mantine-o8ak3lzxw"
                 placeholder="Ingrese la edad de la mascota"
                 required=""
                 type="text"
@@ -255,8 +255,8 @@ exports[`App tests should match snapshot App 1`] = `
           >
             <label
               class="mantine-1w07r5r mantine-TextInput-label"
-              for="mantine-fu2xwu1wf"
-              id="mantine-fu2xwu1wf-label"
+              for="mantine-jzqo0s7o2"
+              id="mantine-jzqo0s7o2-label"
             >
               Fecha de la cita
               <span
@@ -271,9 +271,9 @@ exports[`App tests should match snapshot App 1`] = `
             >
               <input
                 aria-invalid="false"
-                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-17mob80"
+                class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-162fluf"
                 data-testid="Fecha de la cita"
-                id="mantine-fu2xwu1wf"
+                id="mantine-jzqo0s7o2"
                 placeholder="Seleccione la fecha de la cita"
                 required=""
                 type="text"
@@ -287,7 +287,7 @@ exports[`App tests should match snapshot App 1`] = `
         class="mantine-1ne3752"
       />
       <button
-        class="mantine-Button-filled mantine-Button-root mantine-mfakvh"
+        class="mantine-Button-filled mantine-Button-root mantine-14wtse4"
         data-testid="register-btn"
         type="button"
       >

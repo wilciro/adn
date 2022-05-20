@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Requested List tests should match snapshot AboutPage 1`] = `
+<div>
+  <h2
+    id="title-petitions-list"
+  >
+    Lista de citas
+  </h2>
+  <div
+    class="sc-bczRLJ LwpKF"
+  >
+    <table
+      class="mantine-Table-root __mantine-ref-striped mantine-Table-striped __mantine-ref-hover mantine-Table-hover mantine-1fw2ryq"
+    >
+      <caption>
+        Peticiones
+      </caption>
+      <thead>
+        <tr>
+          <th>
+            Mascota
+          </th>
+          <th>
+            Tipo mascota
+          </th>
+          <th>
+            Edad mascota
+          </th>
+          <th>
+            Dueño
+          </th>
+          <th>
+            Documento dueño
+          </th>
+          <th>
+            Date
+          </th>
+          <th>
+            Precio
+          </th>
+        </tr>
+      </thead>
+      <tbody />
+    </table>
+  </div>
+</div>
+`;

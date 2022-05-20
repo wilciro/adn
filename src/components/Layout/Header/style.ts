@@ -56,7 +56,7 @@ export const NavMenu = styled.ul`
     transition: all 0.3s;
     &:hover {
       opacity: 0.9;
-      color: purple;
+      color: var(--primary-color);
     }
   }
 `;
@@ -75,6 +75,6 @@ export const NavClose = styled.button`
   border: none;
   &:hover {
     opacity: 0.8;
-    color: purple;
+    color: var(--primary-color);
   }
 `;

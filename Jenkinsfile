@@ -19,6 +19,7 @@ pipeline {
         stage('Unit testing') {
             steps {
                 echo '------------>Performing unit testing<------------'
+                sh 'SET REACT_APP_HOST=http://example.com'
                 sh 'node -v'
                 sh 'npm run test:coverage'
             }

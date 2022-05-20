@@ -21,8 +21,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-1n2a2bdy4"
-            id="mantine-1n2a2bdy4-label"
+            for="mantine-i21g8a9iu"
+            id="mantine-i21g8a9iu-label"
           >
             Nombre del dueño
             <span
@@ -39,7 +39,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Nombre del dueño"
-              id="mantine-1n2a2bdy4"
+              id="mantine-i21g8a9iu"
               placeholder="Ingrese el nombre del dueño"
               required=""
               type="text"
@@ -53,8 +53,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-2dzmxznf8"
-            id="mantine-2dzmxznf8-label"
+            for="mantine-3v26sm8sn"
+            id="mantine-3v26sm8sn-label"
           >
             Documento del dueño
             <span
@@ -71,7 +71,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Documento del dueño"
-              id="mantine-2dzmxznf8"
+              id="mantine-3v26sm8sn"
               placeholder="Ingrese el documento del dueño"
               required=""
               type="text"
@@ -85,8 +85,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-aan28ne45"
-            id="mantine-aan28ne45-label"
+            for="mantine-i68zcsq0v"
+            id="mantine-i68zcsq0v-label"
           >
             Nombre de la mascota
             <span
@@ -103,7 +103,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Nombre de la mascota"
-              id="mantine-aan28ne45"
+              id="mantine-i68zcsq0v"
               placeholder="Ingrese el nombre de la mascota"
               required=""
               type="text"
@@ -117,8 +117,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-txhkpe4al"
-            id="mantine-txhkpe4al-label"
+            for="mantine-jt9qmimot"
+            id="mantine-jt9qmimot-label"
           >
             Edad de la mascota
             <span
@@ -135,7 +135,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Edad de la mascota"
-              id="mantine-txhkpe4al"
+              id="mantine-jt9qmimot"
               placeholder="Ingrese la edad de la mascota"
               required=""
               type="text"
@@ -149,8 +149,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-rxw2lzdwm"
-            id="mantine-rxw2lzdwm-label"
+            for="mantine-9mjytqx6s"
+            id="mantine-9mjytqx6s-label"
           >
             Fecha de la cita
             <span
@@ -167,7 +167,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="Fecha de la cita"
-              id="mantine-rxw2lzdwm"
+              id="mantine-9mjytqx6s"
               placeholder="Seleccione la fecha de la cita"
               required=""
               type="text"

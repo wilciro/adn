@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GlobalErrorBoundary tests should match snapshot GlobalErrorBoundary 1`] = `
+<div>
+  <h2>
+    Hola Mundo
+  </h2>
+</div>
+`;
+
+exports[`GlobalErrorBoundary tests should match style 1`] = `
+<div>
+  <div
+    class="sc-bczRLJ jbPftT"
+  >
+    Ceiba
+  </div>
+</div>
+`;
