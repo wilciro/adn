@@ -53,7 +53,12 @@ const LoginPage: React.FC = () => {
         ref={refForm}
       />
       <Space h="md" />
-      <Button onClick={login} loading={loading} id="login-button">
+      <Button
+        onClick={login}
+        loading={loading}
+        id="login-button"
+        data-testid="login-btn"
+      >
         Iniciar sesión
       </Button>
     </Box>
