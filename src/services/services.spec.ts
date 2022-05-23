@@ -1,6 +1,5 @@
 import React from 'react';
 import nock from 'nock';
-import { fireEvent, render, screen } from '@testing-library/react';
 import { loginUser } from './login.service';
 import { getTableData } from './tableService';
 import { apiExec, ApiResponseModel } from './genericService';
@@ -60,6 +59,17 @@ describe('services tests', () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/user?username=admin&password=wrong')
       .reply(200, [], { 'Access-Control-Allow-Origin': '*' });
+    const valid = await loginUser({
+      username: 'admin',
+      password: 'wrong',
+    });
+    expect(valid).toBeFalsy();
+  });
+
+  it('should fail login3', async () => {
+    nock(`${process.env.REACT_APP_HOST}`)
+      .get('/user?username=admin&password=wrong')
+      .reply(404, [], { 'Access-Control-Allow-Origin': '*' });
     const valid = await loginUser({
       username: 'admin',
       password: 'wrong',
