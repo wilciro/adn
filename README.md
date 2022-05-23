@@ -9,14 +9,14 @@ Hash de git relacionado: 45f6dd75
 - [x] El bloque se debe preparar con algún preprocesador CSS, LESS o SASS
 - [x] Todas las funcionalidades de bloque se deben construir de manera modular
 - [ ] Se debe soportar el concepto de lazy loading, Manejo de enrutamiento correcto
-- [ ] Los componentes deben tener una única responsabilidad
+- [x] Los componentes deben tener una única responsabilidad
 - [x] La lógica que no le corresponde a los componentes se debe segregar y puede ser llevada a servicios
 - [x] Todo el proyecto debe quedar ejecutando en integración continua (checkout, test, build, sonar)
 - [x] Se deben configurar variables de ambiente para las url o rutas
 - [ ] Se deben tener pruebas funcionales con Cypress
 - [x] Todo debe ser tipado (typescript), por ninguna parte deberían de aparecer tipo any
 - [ ] El proyecto debe ser validado con lint (npm run lint) y no deberían quedar incidencias
-- [ ] El proyecto debe ser responsive, soportar y adaptarse de manera correcta a celulares y a diferentes resoluciones de computador (usar bootstrap, material o flexbox)
+- [x] El proyecto debe ser responsive, soportar y adaptarse de manera correcta a celulares y a diferentes resoluciones de computador (usar bootstrap, material o flexbox)
 - [x] En el desarrollo de la app mínimo debe tener un componente genérico, ejemplo: si se trabaja para un parqueadero, construir un componente input que recibe números de placa el cual se podrá reutilizar en cualquier lugar de la aplicación. Usted debe determinar basado en su lógica de negocio que podría ser genérico
 - [x] Usar el ErrorHandler para mostrar mensajes de error del proyecto
 - [x] Adicionar seguridad (autenticacion con usuario y clave), y con la respuesta asegurar las rutas que se tengan en el proyecto con guard

@@ -6,6 +6,7 @@ import {
   landingForm,
   validateFormLanding,
 } from 'constants/forms/landing';
+import dayjs from 'dayjs';
 import React, { FC, useRef, useState } from 'react';
 import { createRequest } from 'services/appointment.service';
 import { formatPrice } from 'utils/text';
@@ -25,8 +26,8 @@ const LandingPage: FC = () => {
         owner_document: (dataForm?.ownerDocument as string) || '',
         pet_name: (dataForm?.petName as string) || '',
         pet_age: (dataForm?.petAge as string) || '',
-        date: (dataForm?.date as string) || '',
-        time: (dataForm?.time as string) || '',
+        date: dayjs((dataForm?.time as string) || '').format('YYYY-MM-DD'),
+        time: dayjs((dataForm?.time as string) || '').format('HH:mm'),
         pet_type: (dataForm?.petType as string) || '',
         price: total,
       };

@@ -6,7 +6,13 @@ import React, {
 } from 'react';
 
 // Mantine
-import { TextInput, PasswordInput, Select, SelectItem } from '@mantine/core';
+import {
+  TextInput,
+  PasswordInput,
+  Select,
+  SelectItem,
+  NumberInput,
+} from '@mantine/core';
 import { useForm } from '@mantine/form';
 import { DatePicker, TimeInput } from '@mantine/dates';
 import dayjs from 'dayjs';
@@ -66,6 +72,17 @@ const CustomForm: ForwardRefRenderFunction<
           />
         );
         break;
+      case 'number':
+        ret = (
+          <NumberInput
+            data-testid={field.name}
+            required={field.required?.value || false}
+            label={field.label}
+            placeholder={field.placeholder || field.label}
+            {...form.getInputProps(field.name as never)}
+          />
+        );
+        break;
       case 'password':
         ret = (
           <PasswordInput
@@ -94,6 +111,7 @@ const CustomForm: ForwardRefRenderFunction<
       case 'time':
         ret = (
           <TimeInput
+            format="12"
             data-testid={field.name}
             required={field.required?.value || false}
             label={field.label}
@@ -130,7 +148,7 @@ const CustomForm: ForwardRefRenderFunction<
   };
 
   const reset = (): void => {
-    form.reset();
+    form.setValues(initialValues);
   };
 
   useImperativeHandle(ref, () => ({

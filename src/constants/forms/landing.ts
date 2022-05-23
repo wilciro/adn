@@ -35,7 +35,7 @@ export const landingForm: Array<CustomFormFieldProps> = [
     label: 'Edad de la mascota',
     name: 'petAge',
     placeholder: 'Ingrese la edad de la mascota',
-    type: 'text',
+    type: 'number',
     required: {
       value: true,
       message: 'Por favor ingrese la edad de la mascota',
@@ -84,8 +84,8 @@ export const validateFormLanding = {
     `${value}`.length > 0 ? null : 'Por favor ingrese el documento',
   petName: (value: string) =>
     `${value}`.length > 0 ? null : 'Por favor ingrese el nombre',
-  petAge: (value: string) =>
-    `${value}`.length > 0 ? null : 'Por favor ingrese la edad',
+  petAge: (value: number) =>
+    value > 0 && value < 50 ? null : 'Por favor ingrese una edad válida',
   date: (value: string) =>
     `${value}`.length > 0 ? null : 'Por favor ingrese la fecha',
   time: (value: string) =>
@@ -98,8 +98,8 @@ export const initialFormLanding = {
   ownerName: '',
   ownerDocument: '',
   petName: '',
-  petAge: '',
-  date: '',
+  petAge: 0,
+  date: null,
   time: new Date(),
-  petType: '',
+  petType: null,
 };
