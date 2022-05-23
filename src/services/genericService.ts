@@ -20,10 +20,17 @@ export const apiExec = async ({
   body = {},
 }: ApiModel): Promise<ApiResponseModel> => {
   try {
-    const response = await axios.get(
-      `${process.env.REACT_APP_HOST}/${endpoint}`,
-      { params: body },
-    );
+    let response;
+    if (method === 'POST') {
+      response = await axios.post(
+        `${process.env.REACT_APP_HOST}/${endpoint}`,
+        body,
+      );
+    } else {
+      response = await axios.get(`${process.env.REACT_APP_HOST}/${endpoint}`, {
+        params: body,
+      });
+    }
     if (response.status >= OK_MIN && response.status < OK_MAX) {
       return { data: response.data, valid: true };
     }

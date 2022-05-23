@@ -6,14 +6,17 @@ import React, {
 } from 'react';
 
 // Mantine
-import { TextInput, PasswordInput } from '@mantine/core';
+import { TextInput, PasswordInput, Select, SelectItem } from '@mantine/core';
 import { useForm } from '@mantine/form';
+import { DatePicker, TimeInput } from '@mantine/dates';
+import dayjs from 'dayjs';
 
 export interface CustomFormFieldProps {
   type: string;
   name: string;
   label: string;
   placeholder?: string;
+  data?: (string | SelectItem)[];
   required?: {
     value: boolean;
     message: string;
@@ -27,6 +30,7 @@ export interface CustomFormHandleProps {
     | { [key: string]: SubmitType }
     | null
     | Record<string, unknown>;
+  reset: () => void;
 }
 
 export interface ValidateProps {
@@ -54,7 +58,7 @@ const CustomForm: ForwardRefRenderFunction<
       case 'text':
         ret = (
           <TextInput
-            data-testid={field.label}
+            data-testid={field.name}
             required={field.required?.value || false}
             label={field.label}
             placeholder={field.placeholder || field.label}
@@ -65,10 +69,48 @@ const CustomForm: ForwardRefRenderFunction<
       case 'password':
         ret = (
           <PasswordInput
-            data-testid={field.label}
+            data-testid={field.name}
+            required={field.required?.value || false}
             label={field.label}
             placeholder={field.placeholder || field.label}
             {...form.getInputProps(field.name as never)}
+          />
+        );
+        break;
+      case 'date':
+        ret = (
+          <DatePicker
+            dropdownType="modal"
+            data-testid={field.name}
+            required={field.required?.value || false}
+            label={field.label}
+            placeholder={field.placeholder || field.label}
+            {...form.getInputProps(field.name as never)}
+            minDate={dayjs(new Date()).startOf('month').add(5, 'days').toDate()}
+            excludeDate={(date) => date.getDay() === 0 || date.getDay() === 6}
+          />
+        );
+        break;
+      case 'time':
+        ret = (
+          <TimeInput
+            data-testid={field.name}
+            required={field.required?.value || false}
+            label={field.label}
+            placeholder={field.placeholder || field.label}
+            {...form.getInputProps(field.name as never)}
+          />
+        );
+        break;
+      case 'select':
+        ret = (
+          <Select
+            data-testid={field.name}
+            required={field.required?.value || false}
+            label={field.label}
+            placeholder={field.placeholder || field.label}
+            {...form.getInputProps(field.name as never)}
+            data={field.data || []}
           />
         );
         break;
@@ -80,15 +122,20 @@ const CustomForm: ForwardRefRenderFunction<
   };
 
   const onsubmit = (): { [key: string]: SubmitType } | null => {
-    form.validate();
-    if (Object.keys(form.errors).length > 0) {
+    const valid = form.validate();
+    if (valid.hasErrors) {
       return null;
     }
     return form.values as { [key: string]: SubmitType };
   };
 
+  const reset = (): void => {
+    form.reset();
+  };
+
   useImperativeHandle(ref, () => ({
     onsubmit,
+    reset,
   }));
 
   return (

@@ -30,6 +30,7 @@ describe('CustomForm tests', () => {
     const refForm = {
       current: {
         onsubmit: jest.fn(),
+        reset: jest.fn(),
       },
     };
     render(
@@ -62,6 +63,7 @@ describe('CustomForm tests', () => {
     const refForm = {
       current: {
         onsubmit: jest.fn(),
+        reset: jest.fn(),
       },
     };
     render(

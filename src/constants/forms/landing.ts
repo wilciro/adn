@@ -13,7 +13,7 @@ export const landingForm: Array<CustomFormFieldProps> = [
   },
   {
     label: 'Documento del dueño',
-    name: 'owner_document',
+    name: 'ownerDocument',
     placeholder: 'Ingrese el documento del dueño',
     type: 'text',
     required: {
@@ -23,7 +23,7 @@ export const landingForm: Array<CustomFormFieldProps> = [
   },
   {
     label: 'Nombre de la mascota',
-    name: 'pet_name',
+    name: 'petName',
     placeholder: 'Ingrese el nombre de la mascota',
     type: 'text',
     required: {
@@ -33,7 +33,7 @@ export const landingForm: Array<CustomFormFieldProps> = [
   },
   {
     label: 'Edad de la mascota',
-    name: 'pet_age',
+    name: 'petAge',
     placeholder: 'Ingrese la edad de la mascota',
     type: 'text',
     required: {
@@ -42,13 +42,37 @@ export const landingForm: Array<CustomFormFieldProps> = [
     },
   },
   {
+    label: 'Tipo de mascota',
+    name: 'petType',
+    placeholder: 'Seleccione el tipo de mascota',
+    type: 'select',
+    data: [
+      { value: 'gato', label: 'Gato' },
+      { value: 'pato', label: 'Perro' },
+    ],
+    required: {
+      value: true,
+      message: 'Por favor seleccione el tipo de mascota',
+    },
+  },
+  {
     label: 'Fecha de la cita',
     name: 'date',
     placeholder: 'Seleccione la fecha de la cita',
-    type: 'text',
+    type: 'date',
     required: {
       value: true,
       message: 'Por favor seleccione la fecha de la cita',
+    },
+  },
+  {
+    label: 'Hora de la cita',
+    name: 'time',
+    placeholder: 'Seleccione la hora de la cita',
+    type: 'time',
+    required: {
+      value: true,
+      message: 'Por favor seleccione la hora de la cita',
     },
   },
 ];
@@ -56,5 +80,26 @@ export const landingForm: Array<CustomFormFieldProps> = [
 export const validateFormLanding = {
   ownerName: (value: string) =>
     `${value}`.length > 0 ? null : 'Por favor ingrese el nombre del dueño',
-  date: (value: string) => `${value}`.length + 1,
+  ownerDocument: (value: string) =>
+    `${value}`.length > 0 ? null : 'Por favor ingrese el documento',
+  petName: (value: string) =>
+    `${value}`.length > 0 ? null : 'Por favor ingrese el nombre',
+  petAge: (value: string) =>
+    `${value}`.length > 0 ? null : 'Por favor ingrese la edad',
+  date: (value: string) =>
+    `${value}`.length > 0 ? null : 'Por favor ingrese la fecha',
+  time: (value: string) =>
+    `${value}`.length > 0 ? null : 'Por favor ingrese la hora',
+  petType: (value: string) =>
+    `${value}`.length > 0 ? null : 'Por favor seleccione el tipo',
+};
+
+export const initialFormLanding = {
+  ownerName: '',
+  ownerDocument: '',
+  petName: '',
+  petAge: '',
+  date: '',
+  time: new Date(),
+  petType: '',
 };
