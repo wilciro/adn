@@ -58,19 +58,23 @@ const LayoutHeader: React.FC = () => {
         <NavClose onClick={toggleMenu}>X</NavClose>
         <NavMenu>
           <li>
-            <Link to="/" onClick={toggleMenu}>
+            <Link to="/" onClick={toggleMenu} data-testid="link-to-landing">
               Inicio
             </Link>
           </li>
           {logged && (
             <li>
-              <Link to="/dashboard" onClick={toggleMenu}>
+              <Link
+                to="/dashboard"
+                onClick={toggleMenu}
+                data-testid="link-to-dashboard"
+              >
                 Lista de citas
               </Link>
             </li>
           )}
           <li>
-            <Link to="/about" onClick={toggleMenu}>
+            <Link to="/about" onClick={toggleMenu} data-testid="link-to-about">
               Acerca de la app
             </Link>
           </li>

@@ -1,5 +1,5 @@
 // React
-import { Avatar, Box, Button, Space } from '@mantine/core';
+import { Avatar, Box, Button, Divider, Space } from '@mantine/core';
 import CustomForm from 'components/CustomForm';
 import { SessionContext } from 'context/SessionContext';
 import React, { useContext, useRef, useState } from 'react';
@@ -42,9 +42,13 @@ const LoginPage: React.FC = () => {
 
   return (
     <Box sx={{ maxWidth: 350 }} mx="auto">
-      <Avatar size="lg">I</Avatar>
-      <h2 id="title-login">Inicio de sesión</h2>
-      <p>Ingresa tus datos y empieza la administración</p>
+      <div style={{ textAlign: 'center' }}>
+        <Avatar size="lg" color="indigo" style={{ margin: 'auto' }}>
+          I
+        </Avatar>
+        <h2 id="title-login">Inicio de sesión</h2>
+        <p>Ingresa tus datos y empieza la administración</p>
+      </div>
       <Space h="md" />
       <CustomForm
         fields={loginForm}
@@ -53,11 +57,14 @@ const LoginPage: React.FC = () => {
         ref={refForm}
       />
       <Space h="md" />
+      <Divider my="sm" />
+      <Space h="md" />
       <Button
         onClick={login}
         loading={loading}
         id="login-button"
         data-testid="login-btn"
+        fullWidth
       >
         Iniciar sesión
       </Button>

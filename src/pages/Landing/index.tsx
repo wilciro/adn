@@ -34,6 +34,7 @@ const LandingPage: FC = () => {
       createRequest(dataSend).then((success: boolean) => {
         if (success) {
           refForm.current?.reset();
+          setTotal(0);
         }
       });
     }
@@ -50,9 +51,9 @@ const LandingPage: FC = () => {
   return (
     <Box sx={{ maxWidth: 350 }} mx="auto">
       <CheckoutDiv>
-        <h2>Total: {formatPrice(`${total}`)}</h2>
+        <h2 data-testid="total-data">Total: {formatPrice(`${total}`)}</h2>
       </CheckoutDiv>
-      <h2>Solicitud de cita veterinaria</h2>
+      <h2 id="header-landing">Solicitud de cita veterinaria</h2>
       <p>Diligencia todos los campos para asignar la cita</p>
       <Space h="md" />
       <CustomForm
@@ -63,7 +64,7 @@ const LandingPage: FC = () => {
         onChange={changeForm}
       />
       <Space h="md" />
-      <Button onClick={register} data-testid="register-btn">
+      <Button fullWidth onClick={register} data-testid="register-btn">
         Registrar
       </Button>
     </Box>

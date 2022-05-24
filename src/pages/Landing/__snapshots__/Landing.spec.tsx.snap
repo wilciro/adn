@@ -29,8 +29,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-oefvl0hcj"
-            id="mantine-oefvl0hcj-label"
+            for="mantine-xob5vpzqu"
+            id="mantine-xob5vpzqu-label"
           >
             Nombre del dueño
             <span
@@ -47,7 +47,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="ownerName"
-              id="mantine-oefvl0hcj"
+              id="mantine-xob5vpzqu"
               placeholder="Ingrese el nombre del dueño"
               required=""
               type="text"
@@ -62,8 +62,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-w9enffomv"
-            id="mantine-w9enffomv-label"
+            for="mantine-ozwo16k3l"
+            id="mantine-ozwo16k3l-label"
           >
             Documento del dueño
             <span
@@ -80,7 +80,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="ownerDocument"
-              id="mantine-w9enffomv"
+              id="mantine-ozwo16k3l"
               placeholder="Ingrese el documento del dueño"
               required=""
               type="text"
@@ -95,8 +95,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-1ddi82bkp"
-            id="mantine-1ddi82bkp-label"
+            for="mantine-vbeqgs83x"
+            id="mantine-vbeqgs83x-label"
           >
             Nombre de la mascota
             <span
@@ -113,7 +113,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="petName"
-              id="mantine-1ddi82bkp"
+              id="mantine-vbeqgs83x"
               placeholder="Ingrese el nombre de la mascota"
               required=""
               type="text"
@@ -128,8 +128,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-NumberInput-label"
-            for="mantine-tmh4590hy"
-            id="mantine-tmh4590hy-label"
+            for="mantine-z9tbn2kgk"
+            id="mantine-z9tbn2kgk-label"
           >
             Edad de la mascota
             <span
@@ -146,7 +146,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               aria-invalid="false"
               class="mantine-NumberInput-defaultVariant mantine-NumberInput-input mantine-115jdka"
               data-testid="petAge"
-              id="mantine-tmh4590hy"
+              id="mantine-z9tbn2kgk"
               inputmode="numeric"
               placeholder="Ingrese la edad de la mascota"
               required=""
@@ -183,8 +183,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-Select-label"
-            for="mantine-wgrhgo01g"
-            id="mantine-wgrhgo01g-label"
+            for="mantine-tzl5nhgzu"
+            id="mantine-tzl5nhgzu-label"
           >
             Tipo de mascota
             <span
@@ -195,7 +195,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
             </span>
           </label>
           <div
-            aria-controls="mantine-wgrhgo01g"
+            aria-controls="mantine-tzl5nhgzu"
             aria-expanded="false"
             aria-haspopup="listbox"
             role="combobox"
@@ -215,7 +215,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
                 class="mantine-Select-defaultVariant mantine-Select-input mantine-1kkmtua"
                 data-mantine-stop-propagation="false"
                 data-testid="petType"
-                id="mantine-wgrhgo01g"
+                id="mantine-tzl5nhgzu"
                 placeholder="Seleccione el tipo de mascota"
                 readonly=""
                 required=""
@@ -252,8 +252,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-DatePicker-label"
-            for="mantine-ul69nx1qo"
-            id="mantine-ul69nx1qo-label"
+            for="mantine-4k5z93a53"
+            id="mantine-4k5z93a53-label"
           >
             Fecha de la cita
             <span
@@ -275,7 +275,7 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
                   autocomplete="off"
                   class="mantine-DatePicker-defaultVariant mantine-DatePicker-input mantine-DatePicker-input mantine-1oqua4f"
                   data-testid="date"
-                  id="mantine-ul69nx1qo"
+                  id="mantine-4k5z93a53"
                   name="date"
                   placeholder="Seleccione la fecha de la cita"
                   readonly=""
@@ -293,8 +293,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TimeInput-label"
-            for="mantine-cvuawtj18"
-            id="mantine-cvuawtj18-label"
+            for="mantine-9kynua9h0"
+            id="mantine-9kynua9h0-label"
           >
             Hora de la cita
             <span
@@ -319,11 +319,11 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
               >
                 <input
                   class="mantine-TimeInput-timeInput mantine-ix2kpu"
-                  id="mantine-cvuawtj18"
+                  id="mantine-9kynua9h0"
                   inputmode="numeric"
                   placeholder="--"
                   type="text"
-                  value="11"
+                  value="01"
                 />
                 <div
                   class="mantine-Text-root mantine-2qa0ve"
@@ -336,13 +336,13 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
                   inputmode="numeric"
                   placeholder="--"
                   type="text"
-                  value="23"
+                  value="31"
                 />
                 <input
                   class="mantine-kolqo2"
                   placeholder="am"
                   type="text"
-                  value="am"
+                  value="pm"
                 />
               </div>
             </div>

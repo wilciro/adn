@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App tests should login 1`] = `
+<div>
+  <div>
+    <div
+      data-testid="user"
+    >
+      ERROR
+    </div>
+    <button
+      class="mantine-Button-filled mantine-Button-root mantine-1grzg0q"
+      data-testid="login"
+      type="button"
+    >
+      <div
+        class="mantine-3xbgk5 mantine-Button-inner"
+      >
+        <span
+          class="mantine-qo1k2 mantine-Button-label"
+        >
+          login
+        </span>
+      </div>
+    </button>
+    <button
+      class="mantine-Button-filled mantine-Button-root mantine-1grzg0q"
+      data-testid="logout"
+      type="button"
+    >
+      <div
+        class="mantine-3xbgk5 mantine-Button-inner"
+      >
+        <span
+          class="mantine-qo1k2 mantine-Button-label"
+        >
+          logout
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`App tests should logout 1`] = `
+<div>
+  <div>
+    <div
+      data-testid="user"
+    >
+      Juan
+    </div>
+    <button
+      class="mantine-Button-filled mantine-Button-root mantine-1grzg0q"
+      data-testid="login"
+      type="button"
+    >
+      <div
+        class="mantine-3xbgk5 mantine-Button-inner"
+      >
+        <span
+          class="mantine-qo1k2 mantine-Button-label"
+        >
+          login
+        </span>
+      </div>
+    </button>
+    <button
+      class="mantine-Button-filled mantine-Button-root mantine-1grzg0q"
+      data-testid="logout"
+      type="button"
+    >
+      <div
+        class="mantine-3xbgk5 mantine-Button-inner"
+      >
+        <span
+          class="mantine-qo1k2 mantine-Button-label"
+        >
+          logout
+        </span>
+      </div>
+    </button>
+  </div>
+</div>
+`;

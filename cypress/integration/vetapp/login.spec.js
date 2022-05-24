@@ -32,8 +32,8 @@ context('Actions', () => {
     cy.get('#header-login-link').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
 
-    cy.get('[data-testid="Nombre de usuario"]').type('incorrect');
-    cy.get('[data-testid="Contraseña"]').type('incorrect');
+    cy.get('[data-testid="username"]').type('incorrect');
+    cy.get('[data-testid="password"]').type('incorrect');
 
     cy.get('#login-button').click();
 
@@ -44,8 +44,8 @@ context('Actions', () => {
     cy.get('#header-login-link').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
 
-    cy.get('[data-testid="Nombre de usuario"]').type('admin');
-    cy.get('[data-testid="Contraseña"]').type('admin');
+    cy.get('[data-testid="username"]').type('admin');
+    cy.get('[data-testid="password"]').type('admin');
 
     cy.get('#login-button').click();
 
@@ -56,14 +56,14 @@ context('Actions', () => {
     cy.get('#header-login-link').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
 
-    cy.get('[data-testid="Nombre de usuario"]').type('admin');
-    cy.get('[data-testid="Contraseña"]').type('admin');
+    cy.get('[data-testid="username"]').type('admin');
+    cy.get('[data-testid="password"]').type('admin');
 
     cy.get('#login-button').click();
 
     cy.get('#title-petitions-list').should('have.length', 1);
 
-    cy.get('#header-logout-link').click();
+    cy.get('[data-testid="header-logout-link"]').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
   });
 });

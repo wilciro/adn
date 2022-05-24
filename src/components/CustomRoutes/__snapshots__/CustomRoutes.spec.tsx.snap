@@ -29,8 +29,8 @@ exports[`CustomRoutes tests should match login routes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-mwamasyp3"
-            id="mantine-mwamasyp3-label"
+            for="mantine-e3l5vy6e0"
+            id="mantine-e3l5vy6e0-label"
           >
             Nombre del dueño
             <span
@@ -47,7 +47,7 @@ exports[`CustomRoutes tests should match login routes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="ownerName"
-              id="mantine-mwamasyp3"
+              id="mantine-e3l5vy6e0"
               placeholder="Ingrese el nombre del dueño"
               required=""
               type="text"
@@ -62,8 +62,8 @@ exports[`CustomRoutes tests should match login routes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-ek8kiup46"
-            id="mantine-ek8kiup46-label"
+            for="mantine-c4uzbzm4u"
+            id="mantine-c4uzbzm4u-label"
           >
             Documento del dueño
             <span
@@ -80,7 +80,7 @@ exports[`CustomRoutes tests should match login routes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="ownerDocument"
-              id="mantine-ek8kiup46"
+              id="mantine-c4uzbzm4u"
               placeholder="Ingrese el documento del dueño"
               required=""
               type="text"
@@ -95,8 +95,8 @@ exports[`CustomRoutes tests should match login routes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-t8wyonscb"
-            id="mantine-t8wyonscb-label"
+            for="mantine-2m7qcb1q8"
+            id="mantine-2m7qcb1q8-label"
           >
             Nombre de la mascota
             <span
@@ -113,7 +113,7 @@ exports[`CustomRoutes tests should match login routes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="petName"
-              id="mantine-t8wyonscb"
+              id="mantine-2m7qcb1q8"
               placeholder="Ingrese el nombre de la mascota"
               required=""
               type="text"
@@ -128,8 +128,8 @@ exports[`CustomRoutes tests should match login routes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-NumberInput-label"
-            for="mantine-iyhd1g5ct"
-            id="mantine-iyhd1g5ct-label"
+            for="mantine-t11g9uh01"
+            id="mantine-t11g9uh01-label"
           >
             Edad de la mascota
             <span
@@ -146,7 +146,7 @@ exports[`CustomRoutes tests should match login routes 1`] = `
               aria-invalid="false"
               class="mantine-NumberInput-defaultVariant mantine-NumberInput-input mantine-115jdka"
               data-testid="petAge"
-              id="mantine-iyhd1g5ct"
+              id="mantine-t11g9uh01"
               inputmode="numeric"
               placeholder="Ingrese la edad de la mascota"
               required=""
@@ -183,8 +183,8 @@ exports[`CustomRoutes tests should match login routes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-Select-label"
-            for="mantine-2fuuai2yk"
-            id="mantine-2fuuai2yk-label"
+            for="mantine-tz95zgc9r"
+            id="mantine-tz95zgc9r-label"
           >
             Tipo de mascota
             <span
@@ -195,7 +195,7 @@ exports[`CustomRoutes tests should match login routes 1`] = `
             </span>
           </label>
           <div
-            aria-controls="mantine-2fuuai2yk"
+            aria-controls="mantine-tz95zgc9r"
             aria-expanded="false"
             aria-haspopup="listbox"
             role="combobox"
@@ -215,7 +215,7 @@ exports[`CustomRoutes tests should match login routes 1`] = `
                 class="mantine-Select-defaultVariant mantine-Select-input mantine-1kkmtua"
                 data-mantine-stop-propagation="false"
                 data-testid="petType"
-                id="mantine-2fuuai2yk"
+                id="mantine-tz95zgc9r"
                 placeholder="Seleccione el tipo de mascota"
                 readonly=""
                 required=""
@@ -252,8 +252,8 @@ exports[`CustomRoutes tests should match login routes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-DatePicker-label"
-            for="mantine-4gwmdyuy6"
-            id="mantine-4gwmdyuy6-label"
+            for="mantine-redsj86lj"
+            id="mantine-redsj86lj-label"
           >
             Fecha de la cita
             <span
@@ -275,7 +275,7 @@ exports[`CustomRoutes tests should match login routes 1`] = `
                   autocomplete="off"
                   class="mantine-DatePicker-defaultVariant mantine-DatePicker-input mantine-DatePicker-input mantine-1oqua4f"
                   data-testid="date"
-                  id="mantine-4gwmdyuy6"
+                  id="mantine-redsj86lj"
                   name="date"
                   placeholder="Seleccione la fecha de la cita"
                   readonly=""
@@ -293,8 +293,8 @@ exports[`CustomRoutes tests should match login routes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TimeInput-label"
-            for="mantine-nssua1cio"
-            id="mantine-nssua1cio-label"
+            for="mantine-l0jetc8l8"
+            id="mantine-l0jetc8l8-label"
           >
             Hora de la cita
             <span
@@ -319,11 +319,11 @@ exports[`CustomRoutes tests should match login routes 1`] = `
               >
                 <input
                   class="mantine-TimeInput-timeInput mantine-ix2kpu"
-                  id="mantine-nssua1cio"
+                  id="mantine-l0jetc8l8"
                   inputmode="numeric"
                   placeholder="--"
                   type="text"
-                  value="11"
+                  value="01"
                 />
                 <div
                   class="mantine-Text-root mantine-2qa0ve"
@@ -336,13 +336,13 @@ exports[`CustomRoutes tests should match login routes 1`] = `
                   inputmode="numeric"
                   placeholder="--"
                   type="text"
-                  value="23"
+                  value="31"
                 />
                 <input
                   class="mantine-kolqo2"
                   placeholder="am"
                   type="text"
-                  value="am"
+                  value="pm"
                 />
               </div>
             </div>
@@ -401,8 +401,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-bpalbvkql"
-            id="mantine-bpalbvkql-label"
+            for="mantine-gqle96hw1"
+            id="mantine-gqle96hw1-label"
           >
             Nombre del dueño
             <span
@@ -419,7 +419,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="ownerName"
-              id="mantine-bpalbvkql"
+              id="mantine-gqle96hw1"
               placeholder="Ingrese el nombre del dueño"
               required=""
               type="text"
@@ -434,8 +434,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-va89t69gx"
-            id="mantine-va89t69gx-label"
+            for="mantine-lla3901r3"
+            id="mantine-lla3901r3-label"
           >
             Documento del dueño
             <span
@@ -452,7 +452,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="ownerDocument"
-              id="mantine-va89t69gx"
+              id="mantine-lla3901r3"
               placeholder="Ingrese el documento del dueño"
               required=""
               type="text"
@@ -467,8 +467,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-4lita9btj"
-            id="mantine-4lita9btj-label"
+            for="mantine-u4jfy3qtv"
+            id="mantine-u4jfy3qtv-label"
           >
             Nombre de la mascota
             <span
@@ -485,7 +485,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
               data-testid="petName"
-              id="mantine-4lita9btj"
+              id="mantine-u4jfy3qtv"
               placeholder="Ingrese el nombre de la mascota"
               required=""
               type="text"
@@ -500,8 +500,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-NumberInput-label"
-            for="mantine-qfqd10ij0"
-            id="mantine-qfqd10ij0-label"
+            for="mantine-e8dy05ncz"
+            id="mantine-e8dy05ncz-label"
           >
             Edad de la mascota
             <span
@@ -518,7 +518,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               aria-invalid="false"
               class="mantine-NumberInput-defaultVariant mantine-NumberInput-input mantine-115jdka"
               data-testid="petAge"
-              id="mantine-qfqd10ij0"
+              id="mantine-e8dy05ncz"
               inputmode="numeric"
               placeholder="Ingrese la edad de la mascota"
               required=""
@@ -555,8 +555,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-Select-label"
-            for="mantine-2hbyhkas3"
-            id="mantine-2hbyhkas3-label"
+            for="mantine-x97xa9n1f"
+            id="mantine-x97xa9n1f-label"
           >
             Tipo de mascota
             <span
@@ -567,7 +567,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
             </span>
           </label>
           <div
-            aria-controls="mantine-2hbyhkas3"
+            aria-controls="mantine-x97xa9n1f"
             aria-expanded="false"
             aria-haspopup="listbox"
             role="combobox"
@@ -587,7 +587,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
                 class="mantine-Select-defaultVariant mantine-Select-input mantine-1kkmtua"
                 data-mantine-stop-propagation="false"
                 data-testid="petType"
-                id="mantine-2hbyhkas3"
+                id="mantine-x97xa9n1f"
                 placeholder="Seleccione el tipo de mascota"
                 readonly=""
                 required=""
@@ -624,8 +624,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-DatePicker-label"
-            for="mantine-a43xgexqp"
-            id="mantine-a43xgexqp-label"
+            for="mantine-6s3buxwx1"
+            id="mantine-6s3buxwx1-label"
           >
             Fecha de la cita
             <span
@@ -647,7 +647,7 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
                   autocomplete="off"
                   class="mantine-DatePicker-defaultVariant mantine-DatePicker-input mantine-DatePicker-input mantine-1oqua4f"
                   data-testid="date"
-                  id="mantine-a43xgexqp"
+                  id="mantine-6s3buxwx1"
                   name="date"
                   placeholder="Seleccione la fecha de la cita"
                   readonly=""
@@ -665,8 +665,8 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TimeInput-label"
-            for="mantine-vy4a4h31r"
-            id="mantine-vy4a4h31r-label"
+            for="mantine-zjjbl38pd"
+            id="mantine-zjjbl38pd-label"
           >
             Hora de la cita
             <span
@@ -691,11 +691,11 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
               >
                 <input
                   class="mantine-TimeInput-timeInput mantine-ix2kpu"
-                  id="mantine-vy4a4h31r"
+                  id="mantine-zjjbl38pd"
                   inputmode="numeric"
                   placeholder="--"
                   type="text"
-                  value="11"
+                  value="01"
                 />
                 <div
                   class="mantine-Text-root mantine-2qa0ve"
@@ -708,13 +708,13 @@ exports[`CustomRoutes tests should match snapshot CustomRoutes 1`] = `
                   inputmode="numeric"
                   placeholder="--"
                   type="text"
-                  value="23"
+                  value="31"
                 />
                 <input
                   class="mantine-kolqo2"
                   placeholder="am"
                   type="text"
-                  value="am"
+                  value="pm"
                 />
               </div>
             </div>
