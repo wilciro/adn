@@ -32,8 +32,8 @@ exports[`LoginPage tests should match snapshot LoginPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-29pvjob7b"
-            id="mantine-29pvjob7b-label"
+            for="mantine-ayyl47k3v"
+            id="mantine-ayyl47k3v-label"
           >
             Nombre de usuario
             <span
@@ -49,8 +49,8 @@ exports[`LoginPage tests should match snapshot LoginPage 1`] = `
             <input
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
-              data-testid="Nombre de usuario"
-              id="mantine-29pvjob7b"
+              data-testid="username"
+              id="mantine-ayyl47k3v"
               placeholder="Ingrese el nombre de usuario"
               required=""
               type="text"
@@ -65,10 +65,16 @@ exports[`LoginPage tests should match snapshot LoginPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-PasswordInput-label"
-            for="mantine-5oiifc8x5"
-            id="mantine-5oiifc8x5-label"
+            for="mantine-c2wi92spw"
+            id="mantine-c2wi92spw-label"
           >
             Contraseña
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-PasswordInput-required"
+            >
+               *
+            </span>
           </label>
           <div
             class="mantine-PasswordInput-wrapper mantine-12sbrde"
@@ -79,9 +85,10 @@ exports[`LoginPage tests should match snapshot LoginPage 1`] = `
             >
               <input
                 class="mantine-164y8ej mantine-PasswordInput-innerInput"
-                data-testid="Contraseña"
-                id="mantine-5oiifc8x5"
+                data-testid="password"
+                id="mantine-c2wi92spw"
                 placeholder="Ingrese la contraseña"
+                required=""
                 type="password"
                 value=""
               />

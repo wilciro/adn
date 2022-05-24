@@ -3,6 +3,7 @@ import nock from 'nock';
 import { loginUser } from './login.service';
 import { getTableData } from './tableService';
 import { apiExec, ApiResponseModel } from './genericService';
+import { createRequest } from './appointment.service';
 
 describe('services tests', () => {
   it('should get data the generic service', async () => {
@@ -85,5 +86,24 @@ describe('services tests', () => {
       });
     const valid: ApiResponseModel = await getTableData('requests');
     expect(valid?.valid).toBeTruthy();
+  });
+
+  it('should add table data', async () => {
+    nock(`${process.env.REACT_APP_HOST}`)
+      .post('/requests')
+      .reply(200, [{ owner_name: 'Juan' }], {
+        'Access-Control-Allow-Origin': '*',
+      });
+    const valid: boolean = await createRequest({
+      owner_name: 'Name',
+      owner_document: 'document',
+      pet_name: 'name',
+      pet_age: 'age',
+      date: 'date',
+      time: 'time',
+      pet_type: 'price',
+      price: 10,
+    });
+    expect(valid).toBeTruthy();
   });
 });

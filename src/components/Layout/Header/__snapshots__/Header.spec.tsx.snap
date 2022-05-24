@@ -6,10 +6,10 @@ exports[`Header tests should match snapshot Header 1`] = `
     class="sc-bczRLJ eJfard"
   >
     <div
-      class="sc-gsnTZi hPHiZC"
+      class="sc-gsnTZi hpkuKe"
     >
       <button
-        class="mantine-ActionIcon-outline mantine-ActionIcon-root mantine-17oahn4"
+        class="mantine-ActionIcon-hover mantine-ActionIcon-root mantine-t0y1bq"
         data-testid="btn-nav-menu"
         title="Menú"
         type="button"
@@ -51,10 +51,13 @@ exports[`Header tests should match snapshot Header 1`] = `
           />
         </svg>
       </button>
-      Icon
+      <img
+        alt="Logo"
+        src="/assets/192.png"
+      />
     </div>
     <div
-      class="sc-gsnTZi hPHiZC"
+      class="sc-gsnTZi hpkuKe"
     >
       <a
         href="/login"

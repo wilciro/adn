@@ -5,6 +5,14 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
   <div
     class="mantine-yv0or0"
   >
+    <section
+      class="sc-bczRLJ kuDUnz"
+    >
+      <h2>
+        Total: 
+        $ 0,00
+      </h2>
+    </section>
     <h2>
       Solicitud de cita veterinaria
     </h2>
@@ -21,8 +29,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-e77dzfuxf"
-            id="mantine-e77dzfuxf-label"
+            for="mantine-oefvl0hcj"
+            id="mantine-oefvl0hcj-label"
           >
             Nombre del dueño
             <span
@@ -38,11 +46,12 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
             <input
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
-              data-testid="Nombre del dueño"
-              id="mantine-e77dzfuxf"
+              data-testid="ownerName"
+              id="mantine-oefvl0hcj"
               placeholder="Ingrese el nombre del dueño"
               required=""
               type="text"
+              value=""
             />
           </div>
         </div>
@@ -53,8 +62,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-5vnyni9in"
-            id="mantine-5vnyni9in-label"
+            for="mantine-w9enffomv"
+            id="mantine-w9enffomv-label"
           >
             Documento del dueño
             <span
@@ -70,11 +79,12 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
             <input
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
-              data-testid="Documento del dueño"
-              id="mantine-5vnyni9in"
+              data-testid="ownerDocument"
+              id="mantine-w9enffomv"
               placeholder="Ingrese el documento del dueño"
               required=""
               type="text"
+              value=""
             />
           </div>
         </div>
@@ -85,8 +95,8 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
         >
           <label
             class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-o87gpfhas"
-            id="mantine-o87gpfhas-label"
+            for="mantine-1ddi82bkp"
+            id="mantine-1ddi82bkp-label"
           >
             Nombre de la mascota
             <span
@@ -102,77 +112,240 @@ exports[`AboutPage tests should match snapshot AboutPage 1`] = `
             <input
               aria-invalid="false"
               class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
-              data-testid="Nombre de la mascota"
-              id="mantine-o87gpfhas"
+              data-testid="petName"
+              id="mantine-1ddi82bkp"
               placeholder="Ingrese el nombre de la mascota"
-              required=""
-              type="text"
-            />
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          class="mantine-TextInput-root mantine-1m3pqry"
-        >
-          <label
-            class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-133y2hxwu"
-            id="mantine-133y2hxwu-label"
-          >
-            Edad de la mascota
-            <span
-              aria-hidden="true"
-              class="mantine-1m203yh mantine-TextInput-required"
-            >
-               *
-            </span>
-          </label>
-          <div
-            class="mantine-TextInput-wrapper mantine-12sbrde"
-          >
-            <input
-              aria-invalid="false"
-              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
-              data-testid="Edad de la mascota"
-              id="mantine-133y2hxwu"
-              placeholder="Ingrese la edad de la mascota"
-              required=""
-              type="text"
-            />
-          </div>
-        </div>
-      </div>
-      <div>
-        <div
-          class="mantine-TextInput-root mantine-1m3pqry"
-        >
-          <label
-            class="mantine-1w07r5r mantine-TextInput-label"
-            for="mantine-rydlqigd4"
-            id="mantine-rydlqigd4-label"
-          >
-            Fecha de la cita
-            <span
-              aria-hidden="true"
-              class="mantine-1m203yh mantine-TextInput-required"
-            >
-               *
-            </span>
-          </label>
-          <div
-            class="mantine-TextInput-wrapper mantine-12sbrde"
-          >
-            <input
-              aria-invalid="false"
-              class="mantine-TextInput-defaultVariant mantine-TextInput-input mantine-g773hu"
-              data-testid="Fecha de la cita"
-              id="mantine-rydlqigd4"
-              placeholder="Seleccione la fecha de la cita"
               required=""
               type="text"
               value=""
             />
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-NumberInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-NumberInput-label"
+            for="mantine-tmh4590hy"
+            id="mantine-tmh4590hy-label"
+          >
+            Edad de la mascota
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-NumberInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-NumberInput-wrapper mantine-12sbrde"
+          >
+            <input
+              aria-invalid="false"
+              class="mantine-NumberInput-defaultVariant mantine-NumberInput-input mantine-115jdka"
+              data-testid="petAge"
+              id="mantine-tmh4590hy"
+              inputmode="numeric"
+              placeholder="Ingrese la edad de la mascota"
+              required=""
+              step="1"
+              type="text"
+              value="0"
+            />
+            <div
+              class="mantine-1cwybh2 mantine-NumberInput-rightSection"
+            >
+              <div
+                class="mantine-p0axji mantine-NumberInput-rightSection"
+              >
+                <button
+                  aria-hidden="true"
+                  class="mantine-NumberInput-control mantine-NumberInput-controlUp mantine-jbog3w"
+                  tabindex="-1"
+                  type="button"
+                />
+                <button
+                  aria-hidden="true"
+                  class="mantine-NumberInput-control mantine-NumberInput-controlDown mantine-xb3ria"
+                  tabindex="-1"
+                  type="button"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-Select-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-Select-label"
+            for="mantine-wgrhgo01g"
+            id="mantine-wgrhgo01g-label"
+          >
+            Tipo de mascota
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-Select-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            aria-controls="mantine-wgrhgo01g"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            role="combobox"
+            tabindex="-1"
+          >
+            <input
+              type="hidden"
+              value=""
+            />
+            <div
+              class="mantine-Select-wrapper mantine-12sbrde"
+            >
+              <input
+                aria-autocomplete="list"
+                aria-invalid="false"
+                autocomplete="nope"
+                class="mantine-Select-defaultVariant mantine-Select-input mantine-1kkmtua"
+                data-mantine-stop-propagation="false"
+                data-testid="petType"
+                id="mantine-wgrhgo01g"
+                placeholder="Seleccione el tipo de mascota"
+                readonly=""
+                required=""
+                type="text"
+                value=""
+              />
+              <div
+                class="mantine-uquezq mantine-Select-rightSection"
+              >
+                <svg
+                  data-chevron="true"
+                  fill="none"
+                  height="18"
+                  style="color: rgb(134, 142, 150);"
+                  viewBox="0 0 15 15"
+                  width="18"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    clip-rule="evenodd"
+                    d="M4.93179 5.43179C4.75605 5.60753 4.75605 5.89245 4.93179 6.06819C5.10753 6.24392 5.39245 6.24392 5.56819 6.06819L7.49999 4.13638L9.43179 6.06819C9.60753 6.24392 9.89245 6.24392 10.0682 6.06819C10.2439 5.89245 10.2439 5.60753 10.0682 5.43179L7.81819 3.18179C7.73379 3.0974 7.61933 3.04999 7.49999 3.04999C7.38064 3.04999 7.26618 3.0974 7.18179 3.18179L4.93179 5.43179ZM10.0682 9.56819C10.2439 9.39245 10.2439 9.10753 10.0682 8.93179C9.89245 8.75606 9.60753 8.75606 9.43179 8.93179L7.49999 10.8636L5.56819 8.93179C5.39245 8.75606 5.10753 8.75606 4.93179 8.93179C4.75605 9.10753 4.75605 9.39245 4.93179 9.56819L7.18179 11.8182C7.35753 11.9939 7.64245 11.9939 7.81819 11.8182L10.0682 9.56819Z"
+                    fill="currentColor"
+                    fill-rule="evenodd"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-DatePicker-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-DatePicker-label"
+            for="mantine-ul69nx1qo"
+            id="mantine-ul69nx1qo-label"
+          >
+            Fecha de la cita
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-DatePicker-required"
+            >
+               *
+            </span>
+          </label>
+          <div>
+            <div
+              class="mantine-2uofp0 mantine-DatePicker-wrapper"
+            >
+              <div
+                class="mantine-DatePicker-wrapper mantine-12sbrde"
+              >
+                <input
+                  aria-invalid="false"
+                  autocomplete="off"
+                  class="mantine-DatePicker-defaultVariant mantine-DatePicker-input mantine-DatePicker-input mantine-1oqua4f"
+                  data-testid="date"
+                  id="mantine-ul69nx1qo"
+                  name="date"
+                  placeholder="Seleccione la fecha de la cita"
+                  readonly=""
+                  required=""
+                  value=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="mantine-TimeInput-root mantine-1m3pqry"
+        >
+          <label
+            class="mantine-1w07r5r mantine-TimeInput-label"
+            for="mantine-cvuawtj18"
+            id="mantine-cvuawtj18-label"
+          >
+            Hora de la cita
+            <span
+              aria-hidden="true"
+              class="mantine-1m203yh mantine-TimeInput-required"
+            >
+               *
+            </span>
+          </label>
+          <div
+            class="mantine-TimeInput-wrapper mantine-12sbrde"
+          >
+            <div
+              aria-invalid="false"
+              class="mantine-TimeInput-defaultVariant mantine-TimeInput-input mantine-g773hu"
+              data-testid="time"
+              placeholder="Seleccione la hora de la cita"
+              required=""
+            >
+              <div
+                class="mantine-x78oh3 mantine-TimeInput-controls"
+              >
+                <input
+                  class="mantine-TimeInput-timeInput mantine-ix2kpu"
+                  id="mantine-cvuawtj18"
+                  inputmode="numeric"
+                  placeholder="--"
+                  type="text"
+                  value="11"
+                />
+                <div
+                  class="mantine-Text-root mantine-2qa0ve"
+                  style="line-height: 1;"
+                >
+                  :
+                </div>
+                <input
+                  class="mantine-TimeInput-timeInput mantine-ix2kpu"
+                  inputmode="numeric"
+                  placeholder="--"
+                  type="text"
+                  value="23"
+                />
+                <input
+                  class="mantine-kolqo2"
+                  placeholder="am"
+                  type="text"
+                  value="am"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>

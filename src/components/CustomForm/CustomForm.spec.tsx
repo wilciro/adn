@@ -18,12 +18,12 @@ describe('CustomForm tests', () => {
 
   it('should find username field', () => {
     render(<CustomForm initialValues={{}} fields={loginForm} validate={{}} />);
-    expect(screen.getByTestId(loginForm[0].label)).toBeTruthy();
+    expect(screen.getByTestId(loginForm[0].name)).toBeTruthy();
   });
 
   it('should find password field', () => {
     render(<CustomForm initialValues={{}} fields={loginForm} validate={{}} />);
-    expect(screen.getByTestId(loginForm[1].label)).toBeTruthy();
+    expect(screen.getByTestId(loginForm[1].name)).toBeTruthy();
   });
 
   it('should be required password and username', async () => {
@@ -90,10 +90,10 @@ describe('CustomForm tests', () => {
         </button>
       </div>,
     );
-    fireEvent.change(screen.getByTestId(loginForm[0].label), {
+    fireEvent.change(screen.getByTestId(loginForm[0].name), {
       target: { value: 'admin' },
     });
-    fireEvent.change(screen.getByTestId(loginForm[1].label), {
+    fireEvent.change(screen.getByTestId(loginForm[1].name), {
       target: { value: 'admin' },
     });
 

@@ -34,7 +34,10 @@ exports[`Requested List tests should match snapshot AboutPage 1`] = `
             Documento dueño
           </th>
           <th>
-            Date
+            Fecha
+          </th>
+          <th>
+            Hora
           </th>
           <th>
             Precio

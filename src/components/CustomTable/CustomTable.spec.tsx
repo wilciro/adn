@@ -74,9 +74,7 @@ describe('CustomTable tests', () => {
       );
     });
     waitFor(() => {
-      // expect(container.getElementsByTagName('caption')).toBeTruthy();
-      // I'd look for a real text here that is renderer when the data loads
-      expect(screen.getByText('Ciri')).toBeTruthy();
+      expect(screen.getByText('Wilfer Daniel Ciro Maya')).toBeTruthy();
     });
   });
 
