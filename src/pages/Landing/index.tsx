@@ -1,6 +1,6 @@
 // React
 import { Box, Button, Space } from '@mantine/core';
-import CustomForm from 'components/CustomForm';
+import CustomForm, { SubmitType } from 'components/CustomForm';
 import {
   initialFormLanding,
   landingForm,
@@ -39,6 +39,14 @@ const LandingPage: FC = () => {
     }
   };
 
+  const changeForm = (value: { [key: string]: SubmitType }) => {
+    if (value?.petType === 'gato') {
+      setTotal(10000);
+    } else if (value?.petType === 'perro') {
+      setTotal(20000);
+    }
+  };
+
   return (
     <Box sx={{ maxWidth: 350 }} mx="auto">
       <CheckoutDiv>
@@ -52,6 +60,7 @@ const LandingPage: FC = () => {
         fields={landingForm}
         validate={validateFormLanding}
         ref={refForm}
+        onChange={changeForm}
       />
       <Space h="md" />
       <Button onClick={register} data-testid="register-btn">

@@ -48,7 +48,7 @@ export const landingForm: Array<CustomFormFieldProps> = [
     type: 'select',
     data: [
       { value: 'gato', label: 'Gato' },
-      { value: 'pato', label: 'Perro' },
+      { value: 'perro', label: 'Perro' },
     ],
     required: {
       value: true,
@@ -88,8 +88,10 @@ export const validateFormLanding = {
     value > 0 && value < 50 ? null : 'Por favor ingrese una edad válida',
   date: (value: string) =>
     `${value}`.length > 0 ? null : 'Por favor ingrese la fecha',
-  time: (value: string) =>
-    `${value}`.length > 0 ? null : 'Por favor ingrese la hora',
+  time: (value: Date) =>
+    value.getHours() > 8 && value.getHours() < 17
+      ? null
+      : 'El rango horario es de 8 am - 5 pm',
   petType: (value: string) =>
     `${value}`.length > 0 ? null : 'Por favor seleccione el tipo',
 };

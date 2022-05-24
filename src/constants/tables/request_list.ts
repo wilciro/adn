@@ -22,8 +22,12 @@ export const requestListHeader = [
     row: 'owner_document',
   },
   {
-    label: 'Date',
+    label: 'Fecha',
     row: 'date',
+  },
+  {
+    label: 'Hora',
+    row: 'time',
   },
   {
     label: 'Precio',

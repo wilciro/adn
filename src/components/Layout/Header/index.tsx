@@ -34,14 +34,13 @@ const LayoutHeader: React.FC = () => {
       <Header>
         <ButtonsSeparator>
           <ActionIcon
-            variant="outline"
             title="Menú"
             onClick={toggleMenu}
             data-testid="btn-nav-menu"
           >
             <Menu2 size={18} />
           </ActionIcon>
-          Icon
+          <img src="/assets/192.png" alt="Logo" />
         </ButtonsSeparator>
         <ButtonsSeparator>
           {logged ? (

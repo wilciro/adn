@@ -1,5 +1,6 @@
 // React
 import React, {
+  ChangeEvent,
   forwardRef,
   ForwardRefRenderFunction,
   useImperativeHandle,
@@ -29,7 +30,7 @@ export interface CustomFormFieldProps {
   };
 }
 
-type SubmitType = string | number | null | undefined;
+export type SubmitType = string | number | Date | null | undefined;
 
 export interface CustomFormHandleProps {
   onsubmit: () =>
@@ -47,16 +48,31 @@ interface CustomFormProps {
   initialValues: object;
   fields: Array<CustomFormFieldProps>;
   validate: object;
+  onChange?: (value: { [key: string]: SubmitType }) => void;
 }
 
 const CustomForm: ForwardRefRenderFunction<
   CustomFormHandleProps,
   CustomFormProps
-> = ({ initialValues = {}, fields, validate }, ref) => {
+> = (
+  {
+    initialValues = {},
+    fields,
+    validate,
+    onChange = (_: { [key: string]: SubmitType }) => undefined,
+  },
+  ref,
+) => {
   const form = useForm({
     initialValues,
     validate,
   });
+
+  const onChangeForm = (field: string, value: SubmitType): void => {
+    if (onChange) {
+      onChange({ [field]: value });
+    }
+  };
 
   const getField = (field: CustomFormFieldProps) => {
     let ret = null;
@@ -69,6 +85,13 @@ const CustomForm: ForwardRefRenderFunction<
             label={field.label}
             placeholder={field.placeholder || field.label}
             {...form.getInputProps(field.name as never)}
+            onChange={(value: ChangeEvent<HTMLInputElement>) => {
+              form.setFieldValue(
+                field.name as never,
+                value.currentTarget.value as never,
+              );
+              onChangeForm(field.name, value.currentTarget.value);
+            }}
           />
         );
         break;
@@ -80,6 +103,10 @@ const CustomForm: ForwardRefRenderFunction<
             label={field.label}
             placeholder={field.placeholder || field.label}
             {...form.getInputProps(field.name as never)}
+            onChange={(value: number | undefined) => {
+              form.setFieldValue(field.name as never, value as never);
+              onChangeForm(field.name, value);
+            }}
           />
         );
         break;
@@ -91,6 +118,13 @@ const CustomForm: ForwardRefRenderFunction<
             label={field.label}
             placeholder={field.placeholder || field.label}
             {...form.getInputProps(field.name as never)}
+            onChange={(value: ChangeEvent<HTMLInputElement>) => {
+              form.setFieldValue(
+                field.name as never,
+                value.currentTarget.value as never,
+              );
+              onChangeForm(field.name, value.currentTarget.value);
+            }}
           />
         );
         break;
@@ -105,6 +139,10 @@ const CustomForm: ForwardRefRenderFunction<
             {...form.getInputProps(field.name as never)}
             minDate={dayjs(new Date()).startOf('month').add(5, 'days').toDate()}
             excludeDate={(date) => date.getDay() === 0 || date.getDay() === 6}
+            onChange={(value: Date | null) => {
+              form.setFieldValue(field.name as never, value as never);
+              onChangeForm(field.name, value);
+            }}
           />
         );
         break;
@@ -117,6 +155,10 @@ const CustomForm: ForwardRefRenderFunction<
             label={field.label}
             placeholder={field.placeholder || field.label}
             {...form.getInputProps(field.name as never)}
+            onChange={(value: Date) => {
+              form.setFieldValue(field.name as never, value as never);
+              onChangeForm(field.name, value);
+            }}
           />
         );
         break;
@@ -128,6 +170,10 @@ const CustomForm: ForwardRefRenderFunction<
             label={field.label}
             placeholder={field.placeholder || field.label}
             {...form.getInputProps(field.name as never)}
+            onChange={(value: string | null) => {
+              form.setFieldValue(field.name as never, value as never);
+              onChangeForm(field.name, value);
+            }}
             data={field.data || []}
           />
         );

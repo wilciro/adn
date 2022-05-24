@@ -27,6 +27,10 @@ export const ButtonsSeparator = styled.div`
   display: flex;
   align-items: center;
   gap: 10px;
+
+  img {
+    width: 35px;
+  }
 `;
 
 interface NavProps {

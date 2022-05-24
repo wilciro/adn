@@ -12,6 +12,7 @@ module.exports = {
     'react/jsx-props-no-spreading': 'off',
     'react/function-component-definition': 'off',
     'react-hooks/exhaustive-deps': 0,
+    'react/require-default-props': 'off',
   },
   settings: {
     'import/resolver': {
