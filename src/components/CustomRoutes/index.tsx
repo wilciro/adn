@@ -1,5 +1,5 @@
 // React
-import React, { FC, Suspense, useContext } from 'react';
+import React, { FC, useContext } from 'react';
 import { Route } from 'react-router-dom';
 import { Navigate, Routes } from 'react-router';
 
@@ -10,8 +10,7 @@ import { SessionContext } from 'context/SessionContext';
 import LandingPage from 'pages/Landing';
 import RequestsListPage from 'pages/RequestsList';
 import AboutPage from 'pages/About';
-
-const LoginPage = React.lazy(() => import('pages/Login'));
+import LoginPage from 'pages/Login';
 
 const CustomRoutes: FC = () => {
   const {
@@ -24,15 +23,7 @@ const CustomRoutes: FC = () => {
       <Route path="/404" element={<LandingPage />} />
       <Route
         path="/login"
-        element={
-          !logged ? (
-            <Suspense fallback={<div>Loading...</div>}>
-              <LoginPage />
-            </Suspense>
-          ) : (
-            <Navigate to="/dashboard" />
-          )
-        }
+        element={!logged ? <LoginPage /> : <Navigate to="/dashboard" />}
       />
       <Route
         path="/dashboard"

@@ -9,7 +9,7 @@ const AboutPage: FC = () => {
     <AboutDiv>
       <img src="/assets/image.png" alt="logo of vetapp" />
       <div>
-        <h2 id="about-header">Sobre Vet App</h2>
+        <h2 data-testid='about-header' id="about-header">Sobre Vet App</h2>
         <p>
           VetApp es una aplicación desarrollada como proceso de inducción para
           la empresa Ceiba Software.

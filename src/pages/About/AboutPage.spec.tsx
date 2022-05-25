@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import AboutPage from '.';
 import { AboutDiv } from './style';
@@ -7,7 +7,7 @@ import { AboutDiv } from './style';
 describe('AboutPage tests', () => {
   it('should match style', () => {
     const { container } = render(<AboutDiv>Ceiba</AboutDiv>);
-    expect(container).toMatchSnapshot();
+    expect(container).toHaveTextContent('Ceiba');
   });
   it('should match snapshot AboutPage', () => {
     const { container } = render(
@@ -15,7 +15,6 @@ describe('AboutPage tests', () => {
         <AboutPage />
       </BrowserRouter>,
     );
-
-    expect(container).toMatchSnapshot();
+    expect(screen.getByTestId('about-header')).toHaveTextContent('Sobre Vet App');
   });
 });

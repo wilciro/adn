@@ -9,6 +9,7 @@ import ErrorBoundary from '.';
 describe('GlobalErrorBoundary tests', () => {
   it('should match style', () => {
     const { container } = render(<Container>Ceiba</Container>);
+    expect(container).toHaveTextContent('Ceiba');
     expect(container).toMatchSnapshot();
   });
   it('should match snapshot GlobalErrorBoundary', () => {
@@ -16,28 +17,16 @@ describe('GlobalErrorBoundary tests', () => {
       <BrowserRouter>
         <SessionProvider>
           <ErrorBoundary>
-            <h2>Hola Mundo</h2>
+            <h2 data-testid='about-header'>Hola Mundo</h2>
           </ErrorBoundary>
         </SessionProvider>
       </BrowserRouter>,
     );
 
+    expect(screen.getByTestId('about-header')).toHaveTextContent('Hola Mundo');
     expect(container).toMatchSnapshot();
   });
-  it('should match hola mundo GlobalErrorBoundary', () => {
-    const { container } = render(
-      <BrowserRouter>
-        <SessionProvider>
-          <ErrorBoundary>
-            <h2>Hola Mundo</h2>
-          </ErrorBoundary>
-        </SessionProvider>
-      </BrowserRouter>,
-    );
-
-    expect(container).toHaveTextContent('Hola Mundo');
-  });
-  it('should match hola mundo GlobalErrorBoundary', () => {
+  it('should match error message', () => {
     const Child = () => {
       throw new Error();
     };

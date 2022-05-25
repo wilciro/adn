@@ -8,25 +8,25 @@ import {
 } from '../../constants/forms/login';
 
 describe('CustomForm tests', () => {
-  it('should match snapshot', () => {
+  /* it('should match snapshot', () => {
     const { container } = render(
       <CustomForm initialValues={{}} fields={[]} validate={{}} />,
     );
 
     expect(container).toMatchSnapshot();
-  });
+  }); */
 
-  it('should find username field', () => {
+  test('should find username field', () => {
     render(<CustomForm initialValues={{}} fields={loginForm} validate={{}} />);
     expect(screen.getByTestId(loginForm[0].name)).toBeTruthy();
   });
 
-  it('should find password field', () => {
+  test('should find password field', () => {
     render(<CustomForm initialValues={{}} fields={loginForm} validate={{}} />);
     expect(screen.getByTestId(loginForm[1].name)).toBeTruthy();
   });
 
-  it('should be required password and username', async () => {
+  test('should be required password and username', async () => {
     const refForm = {
       current: {
         onsubmit: jest.fn(),
@@ -59,7 +59,7 @@ describe('CustomForm tests', () => {
     expect(screen.getByText('Por favor ingrese la contraseña')).toBeTruthy();
   });
 
-  it('should no show error of required when write', async () => {
+  test('should no show error of required when write', async () => {
     const refForm = {
       current: {
         onsubmit: jest.fn(),
@@ -103,7 +103,7 @@ describe('CustomForm tests', () => {
     ).toBeNull();
     expect(screen.queryByText('Por favor ingrese la contraseña')).toBeNull();
   });
-  it('should be required password and username', async () => {
+  test('should be required password and username', async () => {
     const refForm = {
       current: {
         onsubmit: jest.fn(),

@@ -2,7 +2,9 @@
 
 exports[`GlobalErrorBoundary tests should match snapshot GlobalErrorBoundary 1`] = `
 <div>
-  <h2>
+  <h2
+    data-testid="about-header"
+  >
     Hola Mundo
   </h2>
 </div>

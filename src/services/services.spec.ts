@@ -17,7 +17,8 @@ describe('services tests', () => {
       body: {},
       method: 'GET',
     });
-    expect(valid?.valid).toBeTruthy();
+    expect(valid.valid).toEqual(true);
+    expect(valid.data).toEqual([{ username: 'admin', password: 'admin' }]);
   });
 
   it('should fail when get data the generic service', async () => {
@@ -29,7 +30,8 @@ describe('services tests', () => {
       body: {},
       method: 'GET',
     });
-    expect(valid?.valid).toBeFalsy();
+    expect(valid.valid).toEqual(false);
+    expect(valid.data).toEqual(null);
   });
 
   it('should login', async () => {
@@ -42,7 +44,7 @@ describe('services tests', () => {
       username: 'admin',
       password: 'admin',
     });
-    expect(valid).toBeTruthy();
+    expect(valid).toEqual(true);
   });
 
   it('should fail login', async () => {
@@ -53,7 +55,7 @@ describe('services tests', () => {
       username: 'wrong',
       password: 'admin',
     });
-    expect(valid).toBeFalsy();
+    expect(valid).toEqual(false);
   });
 
   it('should fail login2', async () => {
@@ -70,7 +72,7 @@ describe('services tests', () => {
   it('should fail login3', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/user?username=admin&password=wrong')
-      .reply(404, [], { 'Access-Control-Allow-Origin': '*' });
+      .reply(404, undefined, { 'Access-Control-Allow-Origin': '*' });
     const valid = await loginUser({
       username: 'admin',
       password: 'wrong',
@@ -85,7 +87,8 @@ describe('services tests', () => {
         'Access-Control-Allow-Origin': '*',
       });
     const valid: ApiResponseModel = await getTableData('requests');
-    expect(valid?.valid).toBeTruthy();
+    expect(valid.valid).toEqual(true);
+    expect(valid.data).toEqual([{ owner_name: 'Juan' }]);
   });
 
   it('should add table data', async () => {
@@ -104,6 +107,6 @@ describe('services tests', () => {
       pet_type: 'price',
       price: 10,
     });
-    expect(valid).toBeTruthy();
+    expect(valid).toEqual(true);
   });
 });

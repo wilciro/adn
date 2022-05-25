@@ -33,8 +33,8 @@ Hash de git relacionado: 45f6dd75
 
 ## Segunda entrega
 
-- [ ] El proyecto debe estar construido en su totalidad
+- [x] El proyecto debe estar construido en su totalidad
 - [ ] Debe estar totalmente cubierto con pruebas unitarias, para verificar que las pruebas desarrolladas sean de calidad se debe ejecutar pruebas de mutación con Stryker 
-- [ ] Se deben construir pruebas funcionales con Crypess para los flujos principales de negocio
-- [ ] Se debe ejecutar el comando npm run lint y no se deberían tener incidencias de código 
+- [x] Se deben construir pruebas funcionales con Crypess para los flujos principales de negocio
+- [x] Se debe ejecutar el comando npm run lint y no se deberían tener incidencias de código 
 - [ ] Sonar deberá estar sin deuda técnica (code smell, bugs y vulnerabilidades tendiendo a cero)

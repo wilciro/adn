@@ -8,7 +8,7 @@ describe('App tests', () => {
     const { data, mutations } = React.useContext(SessionContext);
     return (
       <div>
-        {data?.sessionId ? (
+        {data.sessionId ? (
           <div data-testid="user">{data.username}</div>
         ) : (
           <div data-testid="user">ERROR</div>

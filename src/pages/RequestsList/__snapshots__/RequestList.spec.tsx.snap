@@ -3,6 +3,7 @@
 exports[`Requested List tests should match snapshot AboutPage 1`] = `
 <div>
   <h2
+    data-testid="title-petitions-list"
     id="title-petitions-list"
   >
     Lista de citas

@@ -94,6 +94,7 @@ exports[`Header tests should match snapshot Header 1`] = `
     >
       <li>
         <a
+          data-testid="link-to-landing"
           href="/"
         >
           Inicio
@@ -101,6 +102,7 @@ exports[`Header tests should match snapshot Header 1`] = `
       </li>
       <li>
         <a
+          data-testid="link-to-about"
           href="/about"
         >
           Acerca de la app

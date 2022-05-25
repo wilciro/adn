@@ -53,7 +53,9 @@ const LandingPage: FC = () => {
       <CheckoutDiv>
         <h2 data-testid="total-data">Total: {formatPrice(`${total}`)}</h2>
       </CheckoutDiv>
-      <h2 id="header-landing">Solicitud de cita veterinaria</h2>
+      <h2 id="header-landing" data-testid="header-landing">
+        Solicitud de cita veterinaria
+      </h2>
       <p>Diligencia todos los campos para asignar la cita</p>
       <Space h="md" />
       <CustomForm

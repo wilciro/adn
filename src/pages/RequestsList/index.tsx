@@ -8,7 +8,9 @@ import { requestListHeader } from 'constants/tables/request_list';
 const RequestsListPage: React.FC = () => {
   return (
     <>
-      <h2 id="title-petitions-list">Lista de citas</h2>
+      <h2 id="title-petitions-list" data-testid="title-petitions-list">
+        Lista de citas
+      </h2>
       <CustomTable
         title="Peticiones"
         header={requestListHeader}

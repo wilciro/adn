@@ -46,7 +46,9 @@ const LoginPage: React.FC = () => {
         <Avatar size="lg" color="indigo" style={{ margin: 'auto' }}>
           I
         </Avatar>
-        <h2 id="title-login">Inicio de sesión</h2>
+        <h2 id="title-login" data-testid="title-login">
+          Inicio de sesión
+        </h2>
         <p>Ingresa tus datos y empieza la administración</p>
       </div>
       <Space h="md" />
