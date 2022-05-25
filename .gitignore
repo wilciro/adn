@@ -30,4 +30,8 @@ yarn-debug.log*
 yarn-error.log*
 
 *.identifier
-/**/*.identifierae
+/**/*.identifier
+/**/__snapshots__/*
+/**/__snapshots__/
+**/__snapshots__/*
+**/__snapshots__/
