@@ -17,7 +17,7 @@ describe('GlobalErrorBoundary tests', () => {
       <BrowserRouter>
         <SessionProvider>
           <ErrorBoundary>
-            <h2 data-testid='about-header'>Hola Mundo</h2>
+            <h2 data-testid="about-header">Hola Mundo</h2>
           </ErrorBoundary>
         </SessionProvider>
       </BrowserRouter>,

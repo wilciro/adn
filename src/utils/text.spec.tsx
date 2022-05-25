@@ -2,9 +2,9 @@ import React from 'react';
 import { capitalize, formatPrice } from './text';
 
 const text = 'aleluya';
-const text_capitalize = 'Aleluya'
+const textCapitalize = 'Aleluya';
 const text2 = 'CEIBA SOFTWARE';
-const text2_capitalize = 'Ceiba Software'
+const text2Capitalize = 'Ceiba Software';
 
 describe('utils/text tests', () => {
   it('should format price', () => {
@@ -17,7 +17,7 @@ describe('utils/text tests', () => {
   it('should format capitalize text', () => {
     const capitalized1 = capitalize(text);
     const capitalized2 = capitalize(text2);
-    expect(capitalized1).toEqual(text_capitalize);
-    expect(capitalized2).toEqual(text2_capitalize);
+    expect(capitalized1).toEqual(textCapitalize);
+    expect(capitalized2).toEqual(text2Capitalize);
   });
 });

@@ -15,6 +15,8 @@ describe('AboutPage tests', () => {
         <AboutPage />
       </BrowserRouter>,
     );
-    expect(screen.getByTestId('about-header')).toHaveTextContent('Sobre Vet App');
+    expect(screen.getByTestId('about-header')).toHaveTextContent(
+      'Sobre Vet App',
+    );
   });
 });
