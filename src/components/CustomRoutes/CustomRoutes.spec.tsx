@@ -31,7 +31,7 @@ describe('CustomRoutes tests', () => {
     );
   };
 
-  it('should go to login', () => {
+  test('should go to login', () => {
     const { container } = render(
       <SessionProvider>
         <TestComponent />
@@ -39,7 +39,7 @@ describe('CustomRoutes tests', () => {
     );
     expect(screen.getAllByTestId('title-login')).toHaveLength(1);
   });
-  it('should match login routes', () => {
+  test('should match login routes', () => {
     waitFor(() => {
       const { container } = render(
         <SessionProvider>

@@ -6,7 +6,7 @@ import { apiExec, ApiResponseModel } from './genericService';
 import { createRequest } from './appointment.service';
 
 describe('services tests', () => {
-  it('should get data the generic service', async () => {
+  test('should get data the generic service', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/user')
       .reply(200, [{ username: 'admin', password: 'admin' }], {
@@ -21,7 +21,7 @@ describe('services tests', () => {
     expect(valid.data).toEqual([{ username: 'admin', password: 'admin' }]);
   });
 
-  it('should fail when get data the generic service', async () => {
+  test('should fail when get data the generic service', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/users')
       .reply(404, {}, { 'Access-Control-Allow-Origin': '*' });
@@ -34,7 +34,7 @@ describe('services tests', () => {
     expect(valid.data).toEqual(null);
   });
 
-  it('should login', async () => {
+  test('should login', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/user?username=admin&password=admin')
       .reply(200, [{ username: 'admin', password: 'admin' }], {
@@ -47,7 +47,7 @@ describe('services tests', () => {
     expect(valid).toEqual(true);
   });
 
-  it('should fail login', async () => {
+  test('should fail login', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/user?username=wrong&password=admin')
       .reply(200, [], { 'Access-Control-Allow-Origin': '*' });
@@ -58,7 +58,7 @@ describe('services tests', () => {
     expect(valid).toEqual(false);
   });
 
-  it('should fail login2', async () => {
+  test('should fail login2', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/user?username=admin&password=wrong')
       .reply(200, [], { 'Access-Control-Allow-Origin': '*' });
@@ -69,7 +69,7 @@ describe('services tests', () => {
     expect(valid).toBeFalsy();
   });
 
-  it('should fail login3', async () => {
+  test('should fail login3', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/user?username=admin&password=wrong')
       .reply(404, undefined, { 'Access-Control-Allow-Origin': '*' });
@@ -80,7 +80,7 @@ describe('services tests', () => {
     expect(valid).toBeFalsy();
   });
 
-  it('should get table data', async () => {
+  test('should get table data', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/requests')
       .reply(200, [{ owner_name: 'Juan' }], {
@@ -91,7 +91,7 @@ describe('services tests', () => {
     expect(valid.data).toEqual([{ owner_name: 'Juan' }]);
   });
 
-  it('should add table data', async () => {
+  test('should add table data', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .post('/requests')
       .reply(200, [{ owner_name: 'Juan' }], {

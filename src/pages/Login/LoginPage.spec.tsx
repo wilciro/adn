@@ -6,7 +6,7 @@ import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import LoginPage from '.';
 
 describe('LoginPage tests', () => {
-  /* it('should match snapshot LoginPage', () => {
+  /* test('should match snapshot LoginPage', () => {
     const { container } = render(
       <BrowserRouter>
         <SessionProvider>
@@ -17,7 +17,7 @@ describe('LoginPage tests', () => {
 
     expect(container).toMatchSnapshot();
   }); */
-  it('should have text', () => {
+  test('should have text', () => {
     const { container } = render(
       <BrowserRouter>
         <SessionProvider>
@@ -28,7 +28,7 @@ describe('LoginPage tests', () => {
 
     expect(container).toHaveTextContent('Inicio de sesión');
   });
-  it('should show password error', () => {
+  test('should show password error', () => {
     const { container } = render(
       <BrowserRouter>
         <SessionProvider>
@@ -49,7 +49,7 @@ describe('LoginPage tests', () => {
       expect(screen.getByText('Por favor ingrese la contraseña')).toBeTruthy();
     });
   });
-  it('should login success', () => {
+  test('should login success', () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/user?username=admin&password=admin')
       .reply(200, [{ username: 'admin', password: 'admin' }], {

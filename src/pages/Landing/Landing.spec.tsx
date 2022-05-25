@@ -1,21 +1,23 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { landingForm } from 'constants/forms/landing';
 import LandingPage from '.';
 
 describe('LandingPage tests', () => {
-  /* it('should match snapshot LandingPage', () => {
+  /* test('should match snapshot LandingPage', () => {
     const { container } = render(<LandingPage />);
 
     expect(container).toMatchSnapshot();
   }); */
-  it('should register', () => {
-    const { container } = render(<LandingPage />);
+  test('shouldnt register', async () => {
+    const { getByText } = render(<LandingPage />);
 
-    fireEvent.click(screen.getByTestId('register-btn'));
-    expect(screen.getByText('Nombre de la mascota')).toBeTruthy();
+    await waitFor(() => {
+      expect(getByText('Nombre de la mascota')).toBeInTheDocument();
+      fireEvent.click(screen.getByTestId('register-btn'));
+    });
   });
-  it('should register', () => {
+  test('should register', () => {
     const { container } = render(<LandingPage />);
     fireEvent.change(screen.getByTestId(landingForm[0].name), {
       target: { value: 'Wilfer' },

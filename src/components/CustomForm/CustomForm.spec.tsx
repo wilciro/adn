@@ -8,7 +8,7 @@ import {
 } from '../../constants/forms/login';
 
 describe('CustomForm tests', () => {
-  /* it('should match snapshot', () => {
+  /* test('should match snapshot', () => {
     const { container } = render(
       <CustomForm initialValues={{}} fields={[]} validate={{}} />,
     );

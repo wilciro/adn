@@ -10,8 +10,8 @@ describe('utils/text tests', () => {
   it('should format price', () => {
     const price = formatPrice('15000');
     const price2 = formatPrice('100');
-    expect(price).toMatch('$\xa015.000,00');
-    expect(price2).toMatch('$\xa0100,00');
+    expect(price).toEqual('$\xa015.000,00');
+    expect(price2).toEqual('$\xa0100,00');
   });
 
   it('should format capitalize text', () => {

@@ -5,11 +5,11 @@ import AboutPage from '.';
 import { AboutDiv } from './style';
 
 describe('AboutPage tests', () => {
-  it('should match style', () => {
+  test('should match style', () => {
     const { container } = render(<AboutDiv>Ceiba</AboutDiv>);
     expect(container).toHaveTextContent('Ceiba');
   });
-  it('should match snapshot AboutPage', () => {
+  test('should match snapshot AboutPage', () => {
     const { container } = render(
       <BrowserRouter>
         <AboutPage />

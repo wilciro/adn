@@ -7,11 +7,11 @@ import { Header } from './style';
 import LayoutHeader from '.';
 
 describe('Header tests', () => {
-  it('should match style', () => {
+  test('should match style', () => {
     const { container } = render(<Header>Ceiba</Header>);
     expect(container).toMatchSnapshot();
   });
-  it('should match snapshot Header', () => {
+  test('should match snapshot Header', () => {
     const { container } = render(
       <BrowserRouter>
         <SessionProvider>
@@ -22,7 +22,7 @@ describe('Header tests', () => {
 
     expect(container).toMatchSnapshot();
   });
-  it('should open menu', () => {
+  test('should open menu', () => {
     const { container } = render(
       <BrowserRouter>
         <SessionProvider>
@@ -34,7 +34,7 @@ describe('Header tests', () => {
     fireEvent.click(screen.getByTestId('btn-nav-menu'));
     expect(screen.getByTestId('nav-menu')).toHaveStyle(`display: flex`);
   });
-  it('should logout', () => {
+  test('should logout', () => {
     sessionService.createSession('admin');
     const { container } = render(
       <BrowserRouter>

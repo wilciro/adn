@@ -15,5 +15,6 @@
   "tsconfigFile": "tsconfig.json",
   "mutate": [
     "./src/**/*.spec.tsx"
-  ]
+  ],
+  "mutator": { "excludedMutations": ["BlockStatement"] }
 }

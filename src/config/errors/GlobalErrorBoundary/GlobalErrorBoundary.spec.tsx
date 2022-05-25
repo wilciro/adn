@@ -7,12 +7,12 @@ import { Container } from './style';
 import ErrorBoundary from '.';
 
 describe('GlobalErrorBoundary tests', () => {
-  it('should match style', () => {
+  test('should match style', () => {
     const { container } = render(<Container>Ceiba</Container>);
     expect(container).toHaveTextContent('Ceiba');
     expect(container).toMatchSnapshot();
   });
-  it('should match snapshot GlobalErrorBoundary', () => {
+  test('should match snapshot GlobalErrorBoundary', () => {
     const { container } = render(
       <BrowserRouter>
         <SessionProvider>
@@ -26,7 +26,7 @@ describe('GlobalErrorBoundary tests', () => {
     expect(screen.getByTestId('about-header')).toHaveTextContent('Hola Mundo');
     expect(container).toMatchSnapshot();
   });
-  it('should match error message', () => {
+  test('should match error message', () => {
     const Child = () => {
       throw new Error();
     };

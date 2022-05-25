@@ -14,7 +14,7 @@ context('Actions', () => {
     cy.visit('http://localhost:3000/');
   });
 
-  it('Landing exists', () => {
+  test('Landing exists', () => {
     const username = (Math.random() + 1).toString(36).substring(7);
 
     cy.get('#header-landing').should('have.length', 1);

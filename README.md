@@ -4,16 +4,14 @@ Hash de git relacionado: 45f6dd75
 https://www.npmjs.com/package/license-checker
 
 
-Hash de git relacionado: 45f6dd75
-
 - [x] El bloque se debe preparar con algún preprocesador CSS, LESS o SASS
 - [x] Todas las funcionalidades de bloque se deben construir de manera modular
-- [ ] Se debe soportar el concepto de lazy loading, Manejo de enrutamiento correcto
+- [x] Se debe soportar el concepto de lazy loading, Manejo de enrutamiento correcto
 - [x] Los componentes deben tener una única responsabilidad
 - [x] La lógica que no le corresponde a los componentes se debe segregar y puede ser llevada a servicios
 - [x] Todo el proyecto debe quedar ejecutando en integración continua (checkout, test, build, sonar)
 - [x] Se deben configurar variables de ambiente para las url o rutas
-- [ ] Se deben tener pruebas funcionales con Cypress
+- [x] Se deben tener pruebas funcionales con Cypress
 - [x] Todo debe ser tipado (typescript), por ninguna parte deberían de aparecer tipo any
 - [ ] El proyecto debe ser validado con lint (npm run lint) y no deberían quedar incidencias
 - [x] El proyecto debe ser responsive, soportar y adaptarse de manera correcta a celulares y a diferentes resoluciones de computador (usar bootstrap, material o flexbox)

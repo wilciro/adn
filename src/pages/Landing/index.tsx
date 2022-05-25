@@ -1,16 +1,18 @@
 // React
 import { Box, Button, Space } from '@mantine/core';
-import CustomForm, { SubmitType } from 'components/CustomForm';
+import { SubmitType } from 'components/CustomForm';
 import {
   initialFormLanding,
   landingForm,
   validateFormLanding,
 } from 'constants/forms/landing';
 import dayjs from 'dayjs';
-import React, { FC, useRef, useState } from 'react';
+import React, { FC, Suspense, useRef, useState } from 'react';
 import { createRequest } from 'services/appointment.service';
 import { formatPrice } from 'utils/text';
 import { CheckoutDiv } from './style';
+
+const CustomForm = React.lazy(() => import('components/CustomForm'));
 
 type typeCustomForm = React.ElementRef<typeof CustomForm>;
 
@@ -58,13 +60,15 @@ const LandingPage: FC = () => {
       </h2>
       <p>Diligencia todos los campos para asignar la cita</p>
       <Space h="md" />
-      <CustomForm
-        initialValues={initialFormLanding}
-        fields={landingForm}
-        validate={validateFormLanding}
-        ref={refForm}
-        onChange={changeForm}
-      />
+      <Suspense fallback={<div>Loading ...</div>}>
+        <CustomForm
+          initialValues={initialFormLanding}
+          fields={landingForm}
+          validate={validateFormLanding}
+          ref={refForm}
+          onChange={changeForm}
+        />
+      </Suspense>
       <Space h="md" />
       <Button fullWidth onClick={register} data-testid="register-btn">
         Registrar
