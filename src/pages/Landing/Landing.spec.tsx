@@ -1,6 +1,7 @@
 import React from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { landingForm } from 'constants/forms/landing';
+import { NotificationsProvider } from '@mantine/notifications';
 import LandingPage from '.';
 
 describe('LandingPage tests', () => {
@@ -18,8 +19,12 @@ describe('LandingPage tests', () => {
     fireEvent.click(screen.getByTestId('register-btn'));
     expect(getByText('Por favor ingrese el nombre')).toBeInTheDocument();
   });
-  test('should register', () => {
-    const { container } = render(<LandingPage />);
+  test('should register', async () => {
+    const { container } = render(
+      <NotificationsProvider>
+        <LandingPage />
+      </NotificationsProvider>,
+    );
     fireEvent.change(screen.getByTestId(landingForm[0].name), {
       target: { value: 'Wilfer' },
     });
@@ -49,12 +54,13 @@ describe('LandingPage tests', () => {
         screen.getByTestId('date'),
       { target: { value: 10 } },
     );
+
     fireEvent.click(screen.getByTestId('register-btn'));
     // expect(screen.getByText('Nombre de la mascota')).toBeTruthy();
-    /* waitFor(() => {
+    await waitFor(() => {
       expect(
-        screen.getAllByText('Petición realizada con éxito'),
+        screen.getByText('Petición realizada con éxito'),
       ).toBeInTheDocument();
-    }); */
+    });
   });
 });

@@ -9,8 +9,10 @@ export const CheckoutDiv = styled.section`
   position: fixed;
   right: 10px;
   top: 100px;
+  z-index: 10;
+  background: white;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     width: 100%;
     display: block;
     bottom: 0px;

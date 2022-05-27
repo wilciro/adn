@@ -32,7 +32,7 @@ const LoginPage: React.FC = () => {
         password: (dataForm?.password as string) || '',
       };
       loginUser(dataSend).then((valid: boolean) => {
-        // setLoading(false);
+        setLoading(false);
         if (valid) {
           setUsername(dataSend.username);
           navigate('/dashboard');

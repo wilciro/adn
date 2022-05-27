@@ -14,7 +14,7 @@ context('Actions', () => {
     cy.visit('http://localhost:3000/');
   });
 
-  test('Landing exists', () => {
+  it('Landing exists', () => {
     const username = (Math.random() + 1).toString(36).substring(7);
 
     cy.get('#header-landing').should('have.length', 1);
@@ -43,7 +43,7 @@ context('Actions', () => {
 
     cy.get('[data-testid="register-btn"]').click();
 
-    cy.get('#header-login-link').click();
+    cy.get('#header-login-link').click({ force: true });
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
 
     cy.get('[data-testid="username"]').type('admin');

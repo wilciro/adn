@@ -14,7 +14,7 @@ context('Actions', () => {
     cy.visit('http://localhost:3000/');
   });
 
-  test('Correct when credentials are correct', () => {
+  it('Correct when credentials are correct', () => {
     cy.get('#header-login-link').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
 
@@ -39,7 +39,7 @@ context('Actions', () => {
     cy.get('#title-petitions-list').should('have.length', 1);
   });
 
-  test('Cant access to dashboard without login', () => {
+  it('Cant access to dashboard without login', () => {
     cy.get('[data-testid="btn-nav-menu"]').click();
 
     cy.get('[data-testid="link-to-about"]').click();

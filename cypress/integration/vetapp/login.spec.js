@@ -14,12 +14,12 @@ context('Actions', () => {
     cy.visit('http://localhost:3000/');
   });
 
-  test('Go to login form', () => {
+  it('Go to login form', () => {
     cy.get('#header-login-link').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
   });
 
-  test('Fail when no input email', () => {
+  it('Fail when no input email', () => {
     cy.get('#header-login-link').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
 
@@ -28,7 +28,7 @@ context('Actions', () => {
     cy.get('.mantine-PasswordInput-error').should('have.length', 1);
   });
 
-  test('Fail when username no correct', () => {
+  it('Fail when username no correct', () => {
     cy.get('#header-login-link').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
 
@@ -40,7 +40,7 @@ context('Actions', () => {
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
   });
 
-  test('Correct when credentials are correct', () => {
+  it('Correct when credentials are correct', () => {
     cy.get('#header-login-link').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
 
@@ -52,7 +52,7 @@ context('Actions', () => {
     cy.get('#title-petitions-list').should('have.length', 1);
   });
 
-  test('Correct logout', () => {
+  it('Correct logout', () => {
     cy.get('#header-login-link').click();
     cy.get('#title-login').should('have.text', 'Inicio de sesión');
 
