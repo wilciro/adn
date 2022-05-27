@@ -1,5 +1,12 @@
 import React from 'react';
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import {
+  act,
+  fireEvent,
+  render,
+  RenderOptions,
+  screen,
+  waitFor,
+} from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { SessionContext, SessionProvider } from 'context/SessionContext';
 import { Button } from '@mantine/core';
@@ -31,20 +38,34 @@ describe('CustomRoutes tests', () => {
     );
   };
 
-  test('should go to login', () => {
-    const { container } = render(
-      <SessionProvider>
-        <TestComponent />
-      </SessionProvider>,
-    );
-    expect(screen.getAllByTestId('title-login')).toHaveLength(1);
-  });
-  test('should match login routes', async () => {
-    await waitFor(() => {
-      const { container } = render(
+  test('should go to login', async () => {
+    let container: RenderOptions<
+      typeof import('@testing-library/dom/types/queries'),
+      HTMLElement,
+      HTMLElement
+    >;
+    await act(async () => {
+      render(
         <SessionProvider>
           <TestComponent />
         </SessionProvider>,
+        container,
+      );
+    });
+    expect(screen.getAllByTestId('title-login')).toHaveLength(1);
+  });
+  test('should match login routes', async () => {
+    let container: RenderOptions<
+      typeof import('@testing-library/dom/types/queries'),
+      HTMLElement,
+      HTMLElement
+    >;
+    await act(async () => {
+      render(
+        <SessionProvider>
+          <TestComponent />
+        </SessionProvider>,
+        container,
       );
     });
     fireEvent.click(screen.getByTestId('login'));

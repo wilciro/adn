@@ -48,7 +48,11 @@ const LayoutHeader: React.FC = () => {
               Salir
             </Button>
           ) : (
-            <Link to="/login" id="header-login-link">
+            <Link
+              to="/login"
+              id="header-login-link"
+              data-testid="header-login-link"
+            >
               <Button>Ingresar</Button>
             </Link>
           )}

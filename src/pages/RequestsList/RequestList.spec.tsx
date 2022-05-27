@@ -10,13 +10,27 @@ import nock from 'nock';
 import RequestedList from '.';
 
 describe('Requested List tests', () => {
-  test('should match snapshot RequestList', () => {
-    const { container } = render(<RequestedList />);
+  /* test('should match snapshot RequestList', async () => {
+    let container: RenderOptions<
+      typeof import('@testing-library/dom/types/queries'),
+      HTMLElement,
+      HTMLElement
+    >;
+    await act(async () => {
+      render(<RequestedList />, container);
+    });
 
     expect(container).toMatchSnapshot();
-  });
-  test('should match title RequestList', () => {
-    const { container } = render(<RequestedList />);
+  }); */
+  test('should match title RequestList', async () => {
+    let container: RenderOptions<
+      typeof import('@testing-library/dom/types/queries'),
+      HTMLElement,
+      HTMLElement
+    >;
+    await act(async () => {
+      render(<RequestedList />, container);
+    });
 
     expect(screen.getByTestId('title-petitions-list')).toHaveTextContent(
       'Lista de citas',

@@ -6,11 +6,10 @@ import LayoutBody from '.';
 describe('Body tests', () => {
   test('should match style', () => {
     const { container } = render(<Body>Ceiba</Body>);
-    expect(container).toMatchSnapshot();
+    expect(container).toHaveTextContent('Ceiba');
   });
   test('should match snapshot Body', () => {
     const { container } = render(<LayoutBody>Ceiba software 2022</LayoutBody>);
-
     expect(container).toHaveTextContent('Ceiba software 2022');
   });
 });

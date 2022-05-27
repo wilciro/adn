@@ -21,7 +21,7 @@ const AboutPage: FC = () => {
           veterinarias mostrando su precio en tiempo real dependiendo del tipo
           de mascota a valorar.
         </p>
-        <Link to="/">
+        <Link to="/" data-testid="go-landing-btn">
           <Button>Agendar cita</Button>
         </Link>
       </div>

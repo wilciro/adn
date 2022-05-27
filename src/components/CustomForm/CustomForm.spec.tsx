@@ -1,29 +1,47 @@
 import React from 'react';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-import CustomForm from '.';
-import {
-  initialFormLogin,
-  loginForm,
-  validateFormLogin,
-} from '../../constants/forms/login';
+import CustomForm, { CustomFormFieldProps } from '.';
+
+const loginForm: Array<CustomFormFieldProps> = [
+  {
+    label: 'Nombre de usuario',
+    name: 'username',
+    placeholder: 'Ingrese el nombre de usuario',
+    type: 'text',
+    required: {
+      value: true,
+      message: 'Por favor ingrese el nombre de usuario',
+    },
+  },
+  {
+    label: 'Contraseña',
+    name: 'password',
+    placeholder: 'Ingrese la contraseña',
+    type: 'password',
+    required: {
+      value: true,
+      message: 'Por favor ingrese la contraseña',
+    },
+  },
+];
+
+const validateFormLogin = {
+  username: (value: string) =>
+    `${value}`.length > 0 ? null : 'Por favor ingrese el nombre de usuario',
+  password: (value: string) =>
+    `${value}`.length > 0 ? null : 'Por favor ingrese la contraseña',
+};
+
+const initialFormLogin = {
+  username: '',
+  password: '',
+};
 
 describe('CustomForm tests', () => {
-  /* test('should match snapshot', () => {
-    const { container } = render(
-      <CustomForm initialValues={{}} fields={[]} validate={{}} />,
-    );
-
-    expect(container).toMatchSnapshot();
-  }); */
-
-  test('should find username field', () => {
+  test('should find all fields', () => {
     render(<CustomForm initialValues={{}} fields={loginForm} validate={{}} />);
-    expect(screen.getByTestId(loginForm[0].name)).toBeTruthy();
-  });
-
-  test('should find password field', () => {
-    render(<CustomForm initialValues={{}} fields={loginForm} validate={{}} />);
-    expect(screen.getByTestId(loginForm[1].name)).toBeTruthy();
+    expect(screen.getByTestId('username')).toBeInTheDocument();
+    expect(screen.getByTestId('password')).toBeInTheDocument();
   });
 
   test('should be required password and username', async () => {
