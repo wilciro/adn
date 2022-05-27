@@ -23,6 +23,12 @@ pipeline {
                 sh 'REACT_APP_HOST=http://example.com npm run test:coverage'
             }
         }
+        stage('lint') {
+            steps {
+                echo "------------>Checking lint<------------"
+                sh 'npm run lint'
+            }
+        }
         stage('Static Code Analysis') {
             steps {
                 echo '------------>Static code analysis<------------'
@@ -34,7 +40,7 @@ pipeline {
         stage('build') {
             steps {
                 echo "------------>Building<------------"
-                sh 'npm build'
+                sh 'npm run build'
             }
         }
     }
