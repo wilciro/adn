@@ -9,7 +9,7 @@ interface BodyProps {
 }
 
 const LayoutBody: React.FC<BodyProps> = ({ children }) => {
-  return <Body dark={false}>{children}</Body>;
+  return <Body>{children}</Body>;
 };
 
 export default LayoutBody;

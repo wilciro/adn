@@ -10,6 +10,7 @@ import CustomRoutes from 'components/CustomRoutes';
 import ErrorBoundary from 'config/errors/GlobalErrorBoundary';
 import { SessionProvider } from 'context/SessionContext';
 import { MantineProvider } from '@mantine/core';
+import { NotificationsProvider } from '@mantine/notifications';
 
 const App: FC = () => {
   return (
@@ -35,17 +36,19 @@ const App: FC = () => {
       withGlobalStyles
       withNormalizeCSS
     >
-      <BrowserRouter>
-        <ErrorBoundary>
-          <SessionProvider>
-            <LayoutHeader />
-            <LayoutBody>
-              <CustomRoutes />
-            </LayoutBody>
-            <LayoutFooter />
-          </SessionProvider>
-        </ErrorBoundary>
-      </BrowserRouter>
+      <NotificationsProvider position="top-right">
+        <BrowserRouter>
+          <ErrorBoundary>
+            <SessionProvider>
+              <LayoutHeader />
+              <LayoutBody>
+                <CustomRoutes />
+              </LayoutBody>
+              <LayoutFooter />
+            </SessionProvider>
+          </ErrorBoundary>
+        </BrowserRouter>
+      </NotificationsProvider>
     </MantineProvider>
   );
 };

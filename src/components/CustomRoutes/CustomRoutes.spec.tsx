@@ -39,8 +39,8 @@ describe('CustomRoutes tests', () => {
     );
     expect(screen.getAllByTestId('title-login')).toHaveLength(1);
   });
-  test('should match login routes', () => {
-    waitFor(() => {
+  test('should match login routes', async () => {
+    await waitFor(() => {
       const { container } = render(
         <SessionProvider>
           <TestComponent />
@@ -48,8 +48,8 @@ describe('CustomRoutes tests', () => {
       );
     });
     fireEvent.click(screen.getByTestId('login'));
-    waitFor(() => {
-      expect(screen.getAllByTestId('header-landing')).toHaveLength(1);
+    await waitFor(() => {
+      expect(screen.getAllByTestId('title-petitions-list')).toHaveLength(1);
     });
   });
 });

@@ -5,7 +5,7 @@ import LayoutBody from '.';
 
 describe('Body tests', () => {
   test('should match style', () => {
-    const { container } = render(<Body dark={false}>Ceiba</Body>);
+    const { container } = render(<Body>Ceiba</Body>);
     expect(container).toMatchSnapshot();
   });
   test('should match snapshot Body', () => {

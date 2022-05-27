@@ -135,7 +135,7 @@ describe('CustomForm tests', () => {
     fireEvent.change(screen.getByTestId(loginForm[1].name), {
       target: { value: 'admin' },
     });
-    waitFor(() => {
+    await waitFor(() => {
       refForm.current.reset();
       fireEvent.click(screen.getByTestId('login-btn'));
       expect(

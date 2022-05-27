@@ -6,7 +6,7 @@ import { Table } from '@mantine/core';
 import { getTableData } from 'services/tableService';
 import { TableResponsive } from './styles';
 
-interface HeaderModel {
+export interface HeaderModel {
   label: string;
   row: string;
   format?: (row: string) => string;
@@ -46,7 +46,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
 
   return (
     <TableResponsive>
-      <Table striped highlightOnHover>
+      <Table striped highlightOnHover data-testid="table">
         <caption>{title}</caption>
         <thead>
           <tr>{ths}</tr>
@@ -54,7 +54,7 @@ const CustomTable: React.FC<CustomTableProps> = ({
         <tbody>
           {rowsData.map((row: object, index: number) => {
             return (
-              <tr key={`column-${index}`}>
+              <tr key={`column-${index}`} data-testid="table-row">
                 {header.map((itemH: HeaderModel, iHead: number) => {
                   if (itemH.format) {
                     return (

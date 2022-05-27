@@ -1,5 +1,6 @@
 // React
 import { Box, Button, Space } from '@mantine/core';
+import { showNotification } from '@mantine/notifications';
 import { SubmitType } from 'components/CustomForm';
 import {
   initialFormLanding,
@@ -19,10 +20,12 @@ type typeCustomForm = React.ElementRef<typeof CustomForm>;
 const LandingPage: FC = () => {
   const refForm = useRef<typeCustomForm>(null);
   const [total, setTotal] = useState<number>(0);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const register = () => {
     const dataForm = refForm.current?.onsubmit();
     if (dataForm) {
+      setLoading(true);
       const dataSend = {
         owner_name: (dataForm?.ownerName as string) || '',
         owner_document: (dataForm?.ownerDocument as string) || '',
@@ -37,7 +40,12 @@ const LandingPage: FC = () => {
         if (success) {
           refForm.current?.reset();
           setTotal(0);
+          showNotification({
+            title: 'Petición realizada con éxito',
+            message: 'Se asignó su cita correctamente',
+          });
         }
+        setLoading(false);
       });
     }
   };
@@ -70,7 +78,12 @@ const LandingPage: FC = () => {
         />
       </Suspense>
       <Space h="md" />
-      <Button fullWidth onClick={register} data-testid="register-btn">
+      <Button
+        fullWidth
+        onClick={register}
+        data-testid="register-btn"
+        loading={loading}
+      >
         Registrar
       </Button>
     </Box>

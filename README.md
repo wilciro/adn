@@ -13,7 +13,7 @@ https://www.npmjs.com/package/license-checker
 - [x] Se deben configurar variables de ambiente para las url o rutas
 - [x] Se deben tener pruebas funcionales con Cypress
 - [x] Todo debe ser tipado (typescript), por ninguna parte deberían de aparecer tipo any
-- [ ] El proyecto debe ser validado con lint (npm run lint) y no deberían quedar incidencias
+- [x] El proyecto debe ser validado con lint (npm run lint) y no deberían quedar incidencias
 - [x] El proyecto debe ser responsive, soportar y adaptarse de manera correcta a celulares y a diferentes resoluciones de computador (usar bootstrap, material o flexbox)
 - [x] En el desarrollo de la app mínimo debe tener un componente genérico, ejemplo: si se trabaja para un parqueadero, construir un componente input que recibe números de placa el cual se podrá reutilizar en cualquier lugar de la aplicación. Usted debe determinar basado en su lógica de negocio que podría ser genérico
 - [x] Usar el ErrorHandler para mostrar mensajes de error del proyecto

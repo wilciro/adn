@@ -1,3 +1,4 @@
+import { showNotification } from '@mantine/notifications';
 import axios from 'axios';
 
 const OK_MAX = 300;
@@ -34,8 +35,18 @@ export const apiExec = async ({
     if (response.status >= OK_MIN && response.status < OK_MAX) {
       return { data: response.data, valid: true };
     }
+    showNotification({
+      color: 'red',
+      title: 'Error en la petición',
+      message: 'Ocurrió un error con tu petición',
+    });
     return { data: null, valid: false };
   } catch (error) {
+    showNotification({
+      color: 'red',
+      title: 'Error en la petición',
+      message: 'Ocurrió un error con el servidor',
+    });
     return { data: null, valid: false };
   }
 };

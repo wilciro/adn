@@ -6,7 +6,7 @@ import LayoutFooter from '.';
 describe('Footer tests', () => {
   test('should match style', () => {
     const { container } = render(<Footer>Ceiba</Footer>);
-    expect(container).toMatchSnapshot();
+    expect(container).toHaveTextContent('Ceiba');
   });
   test('should match snapshot Footer', () => {
     const { container } = render(<LayoutFooter />);

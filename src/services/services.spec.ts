@@ -1,5 +1,6 @@
 import React from 'react';
 import nock from 'nock';
+import { screen } from '@testing-library/react';
 import { loginUser } from './login.service';
 import { getTableData } from './tableService';
 import { apiExec, ApiResponseModel } from './genericService';
@@ -32,6 +33,7 @@ describe('services tests', () => {
     });
     expect(valid.valid).toEqual(false);
     expect(valid.data).toEqual(null);
+    // expect(screen.findByText('Ocurrió un error con tu petición')).toBeTruthy();
   });
 
   test('should login', async () => {

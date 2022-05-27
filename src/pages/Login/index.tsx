@@ -10,6 +10,7 @@ import {
   loginForm,
   validateFormLogin,
 } from 'constants/forms/login';
+import { showNotification } from '@mantine/notifications';
 
 type typeCustomForm = React.ElementRef<typeof CustomForm>;
 
@@ -31,10 +32,16 @@ const LoginPage: React.FC = () => {
         password: (dataForm?.password as string) || '',
       };
       loginUser(dataSend).then((valid: boolean) => {
-        setLoading(false);
+        // setLoading(false);
         if (valid) {
           setUsername(dataSend.username);
           navigate('/dashboard');
+        } else {
+          showNotification({
+            color: 'red',
+            title: 'Error al iniciar sesión',
+            message: 'Compruebe sus datos e intente de nuevo',
+          });
         }
       });
     }
