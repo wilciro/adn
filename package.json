@@ -52,7 +52,7 @@
     "lint": "eslint --fix src/**/*.{ts,tsx}",
     "server": "json-server --watch ./server/db.json --port 3001",
     "cypress": "cypress open",
-    "stryker": "stryker run"
+    "stryker": "stryker run --ignoreStatic"
   },
   "jest": {
     "collectCoverageFrom": [

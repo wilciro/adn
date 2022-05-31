@@ -30,13 +30,7 @@ describe('CustomTable tests', () => {
           endpoint="requests"
           rows={[
             {
-              owner_document: '1097040584',
               owner_name: 'Wilfer Daniel Ciro Maya',
-              pet_name: 'Ciri',
-              pet_type: 'gato',
-              pet_age: 1,
-              date: '2022-05-23 02:00:00',
-              price: 50000,
             },
           ]}
         />,
@@ -85,6 +79,11 @@ describe('CustomTable tests', () => {
     });
     await waitFor(() => {
       expect(screen.getByText('Wilfer Daniel Ciro Maya')).toBeInTheDocument();
+      expect(screen.getByText('1097040584')).toBeInTheDocument();
+      expect(screen.getByText('Ciri')).toBeInTheDocument();
+      expect(screen.getByText('gato')).toBeInTheDocument();
+      expect(screen.getByText('2022-05-23 02:00:00')).toBeInTheDocument();
+      expect(screen.getByText('$ 50.000,00')).toBeInTheDocument();
     });
     expect(screen.getAllByTestId('table-row')).toHaveLength(1);
   });
@@ -110,7 +109,31 @@ describe('CustomTable tests', () => {
     });
     await waitFor(() => {
       expect(screen.getByText('Hola mundo')).toBeInTheDocument();
-      // expect(screen.getByTestId('table-row')).not.toBeInTheDocument();
+      expect(() => screen.getByTestId('table-row')).toThrow();
+    });
+  });
+  test('should get empty from service error', async () => {
+    nock(`${process.env.REACT_APP_HOST}`).get('/requests').reply(500, [], {
+      'Access-Control-Allow-Origin': '*',
+    });
+    let container: RenderOptions<
+      typeof import('@testing-library/dom/types/queries'),
+      HTMLElement,
+      HTMLElement
+    >;
+    await act(async () => {
+      render(
+        <CustomTable
+          header={requestListHeader}
+          title="Hola mundo"
+          endpoint="requests"
+        />,
+        container,
+      );
+    });
+    await waitFor(() => {
+      expect(screen.getByText('Hola mundo')).toBeInTheDocument();
+      expect(() => screen.getByTestId('table-row')).toThrow();
     });
   });
 });

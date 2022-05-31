@@ -1,6 +1,8 @@
 import React from 'react';
 import nock from 'nock';
-import { screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
+import { NotificationsProvider } from '@mantine/notifications';
+import { Button, MantineProvider } from '@mantine/core';
 import { loginUser } from './login.service';
 import { getTableData } from './tableService';
 import { apiExec, ApiResponseModel } from './genericService';
@@ -25,15 +27,28 @@ describe('services tests', () => {
   test('should fail when get data the generic service', async () => {
     nock(`${process.env.REACT_APP_HOST}`)
       .get('/users')
-      .reply(404, {}, { 'Access-Control-Allow-Origin': '*' });
-    const valid: ApiResponseModel = await apiExec({
-      endpoint: 'users',
-      body: {},
-      method: 'GET',
-    });
-    expect(valid.valid).toEqual(false);
-    expect(valid.data).toEqual(null);
-    // expect(screen.findByText('Ocurrió un error con tu petición')).toBeTruthy();
+      .reply(500, {}, { 'Access-Control-Allow-Origin': '*' });
+    const sendAPI = async () => {
+      const valid: ApiResponseModel = await apiExec({
+        endpoint: 'users',
+        body: {},
+        method: 'GET',
+      });
+      expect(valid.valid).toEqual(false);
+      expect(valid.data).toEqual(null);
+      expect(screen.findByText('Error en la petición')).toBeTruthy();
+    };
+
+    render(
+      <MantineProvider>
+        <NotificationsProvider position="top-right">
+          <Button data-testid="send-api" onClick={() => sendAPI()}>
+            API
+          </Button>
+        </NotificationsProvider>
+      </MantineProvider>,
+    );
+    fireEvent.click(screen.getByTestId('send-api'));
   });
 
   test('should login', async () => {

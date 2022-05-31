@@ -40,7 +40,9 @@ const LayoutHeader: React.FC = () => {
           >
             <Menu2 size={18} />
           </ActionIcon>
-          <img src="/assets/192.png" alt="Logo" />
+          <Link to="/">
+            <img src="/assets/192.png" alt="Logo" />
+          </Link>
         </ButtonsSeparator>
         <ButtonsSeparator>
           {logged ? (
